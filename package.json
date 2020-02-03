@@ -33,7 +33,7 @@
   },
   "scripts": {
     "lint": "eslint src/**/* --ext .ts,.tsx",
-    "test": "jest",
+    "test": "jest --passWithNoTests",
     "build": "rollup -c",
     "start": "rollup -c -w && npm run prettier-watch",
     "prepare": "npm run build",
