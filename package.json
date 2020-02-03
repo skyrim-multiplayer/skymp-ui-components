@@ -1,0 +1,115 @@
+{
+  "name": "skymp-ui-components",
+  "version": "1.0.0",
+  "description": "Library of UI components, styles and resources of SkyMP",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "author": "Open SkyMP",
+  "license": "MIT",
+  "keywords": [
+    "skymp",
+    "skymp-ui",
+    "skymp-react",
+    "skymp-ui-components",
+    "skymp-components",
+    "skymp-frontend",
+    "skymp-library",
+    "skymp-gamemode",
+    "skyrim",
+    "skyrim-react",
+    "skyrim-ui-components",
+    "skyrim-ui",
+    "frontend",
+    "react-components"
+  ],
+  "bugs": {
+    "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
+  },
+  "homepage": "https://github.com/svyatoslavratov/skymp-ui-components#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/svyatoslavratov/skymp-ui-components.git"
+  },
+  "scripts": {
+    "lint": "eslint src/**/* --ext .ts,.tsx",
+    "test": "jest",
+    "build": "rollup -c",
+    "start": "rollup -c -w && npm run prettier-watch",
+    "prepare": "npm run build",
+    "pretty": "prettier --write \"./**/*.+(js|jsx|json|css|scss|md|html)\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@storybook/addon-actions": "^5.3.10",
+    "@storybook/addon-info": "^5.3.10",
+    "@storybook/addon-knobs": "^5.3.10",
+    "@storybook/addon-links": "^5.3.10",
+    "@storybook/addons": "^5.3.10",
+    "@storybook/react": "^5.3.10",
+    "@svgr/rollup": "^5.1.0",
+    "@types/jest": "^25.1.1",
+    "@types/react": "^16.9.17",
+    "@types/storybook__addon-info": "^5.2.1",
+    "@types/storybook__addon-knobs": "^5.2.1",
+    "@types/storybook__react": "^5.2.1",
+    "@typescript-eslint/eslint-plugin": "^2.18.0",
+    "@typescript-eslint/parser": "^2.18.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-config-react-app": "^5.2.0",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-flowtype": "^4.6.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.18.2",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "husky": "^4.2.1",
+    "jest": "^25.1.0",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "react": "^16.12.0",
+    "react-docgen-typescript-loader": "^3.6.0",
+    "rollup": "^1.31.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.2",
+    "rollup-plugin-postcss": "^2.0.5",
+    "rollup-plugin-typescript2": "^0.25.3",
+    "rollup-plugin-url": "^3.0.1",
+    "stylelint": "^13.0.0",
+    "ts-jest": "^25.1.0",
+    "typescript": "^3.7.2",
+    "webpack-blocks": "^2.0.1"
+  },
+  "files": [
+    "dist"
+  ],
+  "eslintConfig": {
+    "extends": [
+      "stylelint"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.+(js|jsx|json|css|scss|md|html)": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
