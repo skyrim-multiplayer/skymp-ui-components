@@ -23,13 +23,13 @@
     "frontend",
     "react-components"
   ],
-  "bugs": {
-    "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
-  },
-  "homepage": "https://github.com/svyatoslavratov/skymp-ui-components#readme",
+  "homepage": "https://svyatoslavratov.github.io/skymp-ui-components",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/svyatoslavratov/skymp-ui-components.git"
+  },
+  "bugs": {
+    "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
   },
   "scripts": {
     "lint": "eslint src/**/* --ext .ts,.tsx",
@@ -39,14 +39,16 @@
     "prepare": "npm run build",
     "pretty": "prettier --write \"./**/*.+(js|jsx|json|css|scss|md|html)\"",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook -o .storybook-static",
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d .storybook-static"
   },
   "dependencies": {},
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^16.0.0",
+    "@babel/core": "^7.8.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.8.4",
     "@storybook/addon-actions": "^5.3.10",
     "@storybook/addon-info": "^5.3.10",
     "@storybook/addon-knobs": "^5.3.10",
@@ -74,6 +76,7 @@
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.2",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "gh-pages": "^2.2.0",
     "husky": "^4.2.1",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
