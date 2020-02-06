@@ -46,7 +46,6 @@ jobs:
 
     steps:
     - run: echo Pull requests base branch is $github.ref
-    - name: Echo and if
+    - name: echo and if
       if: github.event_name == 'push' && github.ref == 'master'
       run: npm deploy
-    - run: echo This event is a pull request that had an assignee removed.
