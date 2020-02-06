@@ -45,7 +45,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - run: echo Pull requests base branch is $github.ref
+    - run: echo $GITHUB_REF
     - name: echo and if
-      if: github.event_name == 'push' && github.ref == 'master'
+      if: github.event_name == 'push' && github.ref == 'refs/heads/master'
       run: npm deploy
