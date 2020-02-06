@@ -33,7 +33,7 @@
   },
   "scripts": {
     "lint": "eslint src/**/* --ext .ts,.tsx",
-    "test": "jest --passWithNoTests",
+    "test": "npm run lint && jest --passWithNoTests",
     "build": "rollup -c",
     "start": "rollup -c -w && npm run prettier-watch",
     "prepare": "npm run build",
@@ -106,7 +106,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run test && lint-staged"
     }
   },
   "lint-staged": {

@@ -3,7 +3,8 @@
     "plugin:@typescript-eslint/recommended",
     "react-app",
     "prettier",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    "eslint:recommended"
   ],
   "plugins": ["@typescript-eslint", "react"],
   "rules": {
