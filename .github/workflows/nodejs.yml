@@ -35,7 +35,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install node-sass --silent
       - run: npm install --production --silent
-        uses: actions/upload-artifact@v1
+      - uses: actions/upload-artifact@v1
         with:
           name: dependencies
       - run: npm test
