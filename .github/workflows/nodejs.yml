@@ -39,6 +39,10 @@ jobs:
       - run: npm run build
       - name: Build storybook
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npm run deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .storybook-static
         env:
           CI: true
