@@ -1,10 +1,12 @@
 name: Node.js CI
 
 on:
-  push
+  push:
+    branches-ignore:
+      - "gh-pages"
   pull_request:
     branches:
-    - master
+      - master
 
 jobs:
   build:
@@ -12,27 +14,37 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
       - uses: actions/checkout@v2
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install dependencies
-      - run: |
-          npm install node-sass --silent
-          npm install --production --silent
-      - name: Testing
+      - run: npm install node-sass --silent
+      - run: npm install --production --silent
       - run: npm test
-      - name: Building
       - run: npm run build
+      - name: Build and deploy storybook
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: npm run build-storybook -o .storybook-static
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .storybook-static
         env:
           CI: true
-
-  deploy-storybook:
-    needs: build
-    run: "Pull request's base branch is: ${github.ref}"
-    if: github.event_name == 'push' && github.ref == "master"
-    run: npm deploy
