@@ -44,13 +44,3 @@ jobs:
         env:
           CI: true
 
-  deploy-storybook:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - run: echo $GITHUB_REF $GITHUB_EVENT_NAME
-      - name: deploy to storybook on gh-pages
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-
