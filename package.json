@@ -35,13 +35,15 @@
     "lint": "eslint src/**/* --ext .ts,.tsx",
     "test": "jest --passWithNoTests",
     "build": "rollup -c",
+    "postbuild": "node scripts/prepublish.js",
     "start": "rollup -c -w && npm run prettier-watch",
     "prepare": "npm run build",
     "pretty": "prettier --write \"./**/*.+(js|jsx|json|css|scss|md|html)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o .storybook-static",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d .storybook-static"
+    "deploy": "gh-pages -d .storybook-static",
+    "publish": "npm run build && npm publish ./dist"
   },
   "dependencies": {},
   "peerDependencies": {
