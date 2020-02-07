@@ -3,50 +3,48 @@ name: Node.js CI
 on:
   push:
     branches-ignore:
-    - 'gh-pages'
+      - "gh-pages"
   pull_request:
     branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x]
+        node-version: [12.x]
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Cache node modules
-      uses: actions/cache@v1
-      env:
-        cache-name: cache-node-modules
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-build-${{ env.cache-name }}-
-          ${{ runner.os }}-build-
-          ${{ runner.os }}-
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-    - run: npm install node-sass --silent
-    - run: npm install --production --silent
-    - run: npm test
-    - run: npm run build
-      env:
-        CI: true
-  deploy-storybook:
-    needs: build
-    runs-on: ubuntu-latest
-
-    steps:
-    - run: echo Pull requests base branch is $github.ref
-    - name: Echo and if
-      if: github.event_name == 'push' && github.ref == 'master'
-      run: npm deploy
-    - run: echo This event is a pull request that had an assignee removed.
+      - uses: actions/checkout@v2
+      - name: Cache node modules
+        uses: actions/cache@v1
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install node-sass --silent
+      - run: npm install --production --silent
+      - run: npm test
+      - run: npm run build
+      - name: Build and deploy storybook
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: npm run build-storybook -o .storybook-static
+      - uses: JamesIves/github-pages-deploy-action@releases/v3
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: .storybook-static
+        env:
+          CI: true
