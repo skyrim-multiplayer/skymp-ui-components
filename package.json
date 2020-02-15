@@ -32,8 +32,8 @@
     "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
   },
   "scripts": {
-    "eslint": "eslint \"src/**/*.{ts,tsx}\"",
-    "stylelint": "stylelint \"src/**/*.(css|scss)\"",
+    "eslint": "eslint \"src/**/*.{ts,tsx}\" --no-error-on-unmatched-pattern",
+    "stylelint": "stylelint \"src/**/*.(css|scss)\" --allow-empty-input",
     "lint": "npm run eslint && npm run stylelint",
     "test": "jest --passWithNoTests",
     "build": "rollup -c",
