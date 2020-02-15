@@ -1,4 +1,4 @@
-import fs from "fs";
+const  fs = require("fs");
 
 const DIST_PATH = "dist/";
 const README_PATH = "README.md";
