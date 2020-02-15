@@ -38,13 +38,13 @@
     "test": "jest --passWithNoTests",
     "build": "rollup -c",
     "postbuild": "node scripts/prepublish.js",
+    "prepare": "npm run build",
     "start": "rollup -c -w && npm run prettier-watch",
     "pretty": "prettier --write \"./**/*.+(js|jsx|json|css|scss|md|html)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o .storybook-static",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d .storybook-static",
-    "publish": "npm run build && npm publish --access public"
+    "deploy": "gh-pages -d .storybook-static"
   },
   "dependencies": {},
   "peerDependencies": {
