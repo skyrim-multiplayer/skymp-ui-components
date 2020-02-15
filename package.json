@@ -39,13 +39,12 @@
     "build": "rollup -c",
     "postbuild": "node scripts/prepublish.js",
     "start": "rollup -c -w && npm run prettier-watch",
-    "prepare": "npm run build",
     "pretty": "prettier --write \"./**/*.+(js|jsx|json|css|scss|md|html)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o .storybook-static",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d .storybook-static",
-    "publish": "npm publish --access public"
+    "publish": "npm run build && npm publish --access public"
   },
   "dependencies": {},
   "peerDependencies": {
