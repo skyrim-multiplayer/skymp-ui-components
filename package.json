@@ -1,5 +1,5 @@
 {
-  "name": "skymp-ui-components",
+  "name": "@skymp/skymp-ui-components",
   "version": "1.0.0",
   "description": "Library of UI components, styles and resources of SkyMP",
   "main": "dist/index.js",
@@ -45,7 +45,7 @@
     "build-storybook": "build-storybook -o .storybook-static",
     "predeploy": "npm run build-storybook",
     "deploy": "gh-pages -d .storybook-static",
-    "publish": "npm run build && npm publish ./dist"
+    "publish": "npm publish --access public"
   },
   "dependencies": {},
   "peerDependencies": {
