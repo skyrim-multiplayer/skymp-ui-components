@@ -32,7 +32,9 @@
     "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
   },
   "scripts": {
-    "lint": "eslint src/**/* --ext .ts,.tsx",
+    "eslint": "eslint \"src/**/*.{ts,tsx}\"",
+    "stylelint": "stylelint \"src/**/*.(css|scss)\"",
+    "lint": "npm run eslint && npm run stylelint",
     "test": "jest --passWithNoTests",
     "build": "rollup -c",
     "postbuild": "node scripts/prepublish.js",
@@ -96,7 +98,8 @@
     "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-url": "^3.0.1",
-    "stylelint": "^13.0.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^25.1.0",
     "typescript": "^3.7.2",
     "webpack-blocks": "^2.0.1"
@@ -111,7 +114,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run lint && npm run test"
     }
   },
   "lint-staged": {

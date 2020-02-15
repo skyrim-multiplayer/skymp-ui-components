@@ -35,7 +35,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install node-sass --silent
       - run: npm install --production --silent
-      - run: npm test
+      - run: npm run lint
+      - run: npm run test
       - run: npm run build
       - name: Build and deploy storybook
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
