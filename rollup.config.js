@@ -4,7 +4,8 @@ import external from "rollup-plugin-peer-deps-external";
 import postcss from "rollup-plugin-postcss";
 import resolve from "rollup-plugin-node-resolve";
 import url from "rollup-plugin-url";
-import svgr from "@svgr/rollup";
+import svgr from '@svgr/rollup'
+import { terser } from "rollup-plugin-terser";
 
 import pkg from "./package.json";
 
@@ -36,10 +37,12 @@ export default {
     svgr(),
     resolve(),
     typescript({
+      tsconfig: "tsconfig.json",
       rollupCommonJSResolveHack: true,
       clean: true,
       exclude: ["src/**/*.stories.tsx", "src/**/*.test.(tsx|ts)"]
     }),
-    commonjs()
+    commonjs(),
+    terser()
   ]
 };
