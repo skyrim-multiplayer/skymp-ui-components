@@ -1,5 +1,5 @@
 {
-  "name": "skymp-ui-components",
+  "name": "@skymp/skymp-ui-components",
   "version": "1.0.0",
   "description": "Library of UI components, styles and resources of SkyMP",
   "main": "dist/index.js",
@@ -32,23 +32,28 @@
     "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
   },
   "scripts": {
-    "lint": "eslint src/**/* --ext .ts,.tsx",
+    "eslint": "eslint \"src/**/*.{ts,tsx}\" --no-error-on-unmatched-pattern",
+    "stylelint": "stylelint \"src/**/*.(css|scss)\" --allow-empty-input",
+    "lint": "npm run eslint && npm run stylelint",
     "test": "jest --passWithNoTests",
     "build": "rollup -c",
+    "postbuild": "node scripts/prepublish.js",
     "start": "rollup -c -w && npm run prettier-watch",
     "prepare": "npm run build",
     "pretty": "prettier --write \"./**/*.+(js|jsx|json|css|scss|md|html)\"",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o .storybook-static",
     "predeploy": "npm run build-storybook",
-    "deploy": "gh-pages -d .storybook-static"
+    "deploy": "gh-pages -d .storybook-static",
+    "publish": "npm publish --access public"
   },
   "dependencies": {},
   "peerDependencies": {
     "react": "^16.0.0",
-    "@babel/core": "^7.8.4"
+    "node-sass": "^4.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
     "@storybook/addon-actions": "^5.3.10",
     "@storybook/addon-info": "^5.3.10",
     "@storybook/addon-knobs": "^5.3.10",
@@ -80,6 +85,7 @@
     "husky": "^4.2.1",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.7",
+    "node-sass": "^4.13.1",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
     "react-docgen-typescript-loader": "^3.6.0",
@@ -89,9 +95,11 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.2",
     "rollup-plugin-postcss": "^2.0.5",
+    "rollup-plugin-terser": "^5.2.0",
     "rollup-plugin-typescript2": "^0.25.3",
     "rollup-plugin-url": "^3.0.1",
-    "stylelint": "^13.0.0",
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0",
     "ts-jest": "^25.1.0",
     "typescript": "^3.7.2",
     "webpack-blocks": "^2.0.1"
@@ -106,7 +114,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test"
+      "pre-commit": "npm run lint && npm run test"
     }
   },
   "lint-staged": {
