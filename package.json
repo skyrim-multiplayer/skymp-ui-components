@@ -1,6 +1,6 @@
 {
   "name": "@skymp/skymp-ui-components",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Library of UI components, styles and resources of SkyMP",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
