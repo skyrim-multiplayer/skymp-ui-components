@@ -3,7 +3,8 @@ import { addDecorator } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs";
 
-// automatically import all files ending in *.stories.tsx
+import "../src/resources/styles/index.scss";
+
 const req = require.context("../src", true, /\.stories\.tsx$/);
 
 function loadStories() {

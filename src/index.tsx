@@ -2,7 +2,7 @@ import React from "react";
 
 import { Test } from "./components/skymp-window";
 
-import "./style.scss";
+import "./resources/styles/index.scss";
 
 export const Hello = () => {
   return (
@@ -13,5 +13,14 @@ export const Hello = () => {
     </div>
   );
 };
+
+interface Itest {
+  name: string;
+  className: string
+}
+
+export const test = ({name, className} : Itest) => {
+  return <div className={className}>{name}</div>
+}
 
 export default Hello;

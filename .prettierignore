@@ -4,3 +4,5 @@ build/*
 
 # test artefact
 coverage/*
+
+.storybook-static/*
