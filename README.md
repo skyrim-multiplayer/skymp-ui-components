@@ -8,7 +8,6 @@ Library of UI components, styles and resources of SkyMP
 npm install @skymp/skymp-ui-components
 ```
 
-
 ### Development
 
 ```sh
@@ -25,4 +24,4 @@ npm run storybook
 ```
 
 ### Contributing
-Read our [contributing guide](https://github.com/svyatoslavratov/skymp-ui-components/blob/master/CONTRIBUTING.MD)
+Read our [contributing guide](CONTRIBUTING.MD)

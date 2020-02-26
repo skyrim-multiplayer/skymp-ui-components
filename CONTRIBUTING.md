@@ -2,7 +2,7 @@
 
 ### Before you started development
 
-* Learn rules of [Code of Conduct](https://github.com/svyatoslavratov/skymp-ui-components/blob/master/CODE_OF_CONDUCT.MD)
+* Learn rules of [Code of Conduct](CODE_OF_CONDUCT.MD)
 * Learn style guide:
  https://github.com/airbnb/javascript
  https://www.robinwieruch.de/javascript-naming-conventions
