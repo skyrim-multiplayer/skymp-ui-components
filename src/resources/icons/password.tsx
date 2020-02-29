@@ -1,12 +1,12 @@
 import React from "react";
 
-import { IconSVG, SkympIconSVGProps } from "./shared";
+import { IconSVG } from "./shared";
 
-export const SkympPasswordIcon = (props: SkympIconSVGProps) => (
+export const SkympPasswordIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <IconSVG
-    SVGProps={{ ...props.SVGProps, viewBox: "0 0 1.73 0.79", stroke: "none" }}
+    {...props} viewBox="0 0 1.73 0.79"
   >
-    <g className={props.className} style={props.style}>
+    <g stroke="none" fill="currentColor">
       <polygon points="-0,0 0.51,0 0.51,0.35 -0,0.35 " />
       <polygon points="0.61,0 1.12,0 1.12,0.35 0.61,0.35 " />
       <polygon points="1.23,0 1.73,0 1.73,0.35 1.23,0.35 " />

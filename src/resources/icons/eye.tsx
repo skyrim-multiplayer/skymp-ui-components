@@ -1,20 +1,14 @@
 import React from "react";
 
-import { IconSVG, SkympIconSVGProps } from "./shared";
+import { IconSVG } from "./shared";
 
-interface SkympEyeSVGProps extends SkympIconSVGProps {
+interface SkympEyeSVGProps extends React.SVGProps<SVGSVGElement> {
   isOpen?: boolean;
 }
 
 export const SkympEyeIcon = (props: SkympEyeSVGProps) => (
-  <IconSVG
-    SVGProps={{
-      ...props.SVGProps,
-      viewBox: props.isOpen ? "0 0 0.17 0.2" : "0 0 3.07 3.08",
-      stroke: "none"
-    }}
-  >
-    <g className={props.className} style={props.style}>
+  <IconSVG {...props} viewBox={props.isOpen ? "0 0 0.17 0.2" : "0 0 3.07 3.08"}>
+    <g fill="currentColor" stroke="none">
       {props.isOpen ? (
         <>
           <path d="M0.11 0.09c0.01,0.03 -0.03,0.04 -0.04,0.03 -0.02,-0.02 0,-0.05 0.03,-0.04 -0.01,0.01 -0,0.02 0.01,0.02 0,-0 0,-0 0.01,-0zm0 -0.04c0.01,0.01 0.02,0.02 0.03,0.03 0,0 0.01,0.02 0,0.02 -0,0 -0,0 -0,-0 -0,-0 0,-0.01 -0.01,-0.02 -0.01,-0.01 -0.02,-0.02 -0.03,-0.03 -0.01,-0 -0.02,-0 -0.02,-0 -0,-0.01 0.02,-0 0.03,0zm0.04 0.06c0,-0.03 -0.02,-0.06 -0.06,-0.07 -0.04,-0 -0.06,0.02 -0.07,0.05 -0,0.04 0.02,0.06 0.05,0.07 0.04,0 0.06,-0.02 0.07,-0.06z" />

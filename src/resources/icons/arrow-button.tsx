@@ -1,13 +1,17 @@
 import React from "react";
 
-import { IconSVG, SkympIconSVGProps } from "./shared";
+import { IconSVG } from "./shared";
 
-export const SkympArrowButtonIcon = (props: SkympIconSVGProps) => {
+export const SkympArrowButtonIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <IconSVG
-      SVGProps={{ ...props.SVGProps, viewBox: "0 0 0.72 0.88", stroke: "none" }}
+        {...props}
+        viewBox="0 0 0.72 0.88"
     >
-      <g className={props.className} style={props.style}>
+      <g
+        stroke="none"
+        fill="currentColor"
+      >
         <path
           d={
             "M-0 0.88l0.08 -0 0.08 -0.08 0.13 0.08 0.43 -0.44 -0.42 -0.44 -0.08 0 -0.06 0.09 -0.11 -0.09 -0.04 0 0 0.64 0 0.24zm0.23 -0.12l-0.19 -0.18 -0.01 -0.26 0.21 -0.19 0.33 0.32 -0.35 0.32z"

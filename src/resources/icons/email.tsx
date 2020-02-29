@@ -1,10 +1,10 @@
 import React from "react";
 
-import { IconSVG, SkympIconSVGProps } from "./shared";
+import { IconSVG } from "./shared";
 
-export const SkympEmailIcon = (props: SkympIconSVGProps) => (
-  <IconSVG SVGProps={{ ...props.SVGProps, viewBox: "0 0 1.43 0.89",  stroke:"none"}}>
-    <g className={props.className} style={props.style} >
+export const SkympEmailIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <IconSVG {...props} viewBox="0 0 1.43 0.89">
+    <g stroke="none" fill="currentColor">
       <path
         d={
           "M0.71 0.57c0.01,-0 0.07,-0.06 0.08,-0.07 0.01,-0.01 0.03,-0.02 0.04,-0.04 0.01,-0.01 0.03,-0.02 0.04,-0.04l0.46 -0.41c0.01,-0.01 0.02,-0.01 0.02,-0.02l-1.29 -0c0,0.01 0.18,0.16 0.2,0.18l0.2 0.18c0.01,0.01 0.03,0.02 0.04,0.03l0.2 0.18z"

@@ -1,6 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import { text, boolean } from "@storybook/addon-knobs";
+import { boolean, color, text } from "@storybook/addon-knobs";
+import { action } from "@storybook/addon-actions";
 
 import {
   SkympArrowButtonIcon,
@@ -12,49 +13,99 @@ import {
   SkympPasswordIcon
 } from "./index";
 
-import "./story.scss";
+import "./style.stories.scss";
 
 const stories = storiesOf("Icons", module);
 
 stories.add(
-  "All icons",
+  "All",
   () => {
     return (
-      <div className="story-icons">
-        <div className="story-icons__group">
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympArrowButtonIcon</h3>
-            <SkympArrowButtonIcon />
-          </div>
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympCheckboxIcon</h3>
-            <SkympCheckboxIcon
-              isChecked={boolean("SkympCheckboxIcon: isChecked", true)}
-            />
-          </div>
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympDragonbornIcon</h3>
-            <SkympDragonbornIcon />
+      <div className="story-icons story-icons__all">
+        <div>
+          <h3>SkympArrowButtonIcon</h3>
+          <SkympArrowButtonIcon />
+        </div>
+
+        <div>
+          <h3>SkympCheckboxIcon</h3>
+          <SkympCheckboxIcon
+            isChecked={boolean("SkympCheckboxIcon: isChecked", true)}
+          />
+        </div>
+
+        <div>
+          <h3>SkympDragonbornIcon</h3>
+          <SkympDragonbornIcon />
+        </div>
+
+        <div>
+          <h3>SkympEmailIcon</h3>
+          <SkympEmailIcon />
+        </div>
+
+        <div>
+          <h3>SkympEyeIcon</h3>
+          <SkympEyeIcon isOpen={boolean("SkympEyeIcon: isOpen", false)} />
+        </div>
+
+        <div>
+          <h3>SkympInviteCodeIcon</h3>
+          <SkympInviteCodeIcon />
+        </div>
+
+        <div>
+          <h3>SkympPasswordIcon</h3>
+          <SkympPasswordIcon />
+        </div>
+      </div>
+    );
+  },
+  {
+    info: {
+      inline: false,
+      text: `
+      Icons realize interface \`React.SVGProps<SVGSVGElement>\`
+    `
+    }
+  }
+);
+
+stories.add(
+  "SkympArrowButtonIcon",
+  () => {
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
+    const textState = text("text", "some text");
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper story-skymp-arrow-button-icon__wrapper">
+          <SkympArrowButtonIcon color={fillColor} />
+
+          <div style={{ transform: "rotate(-180deg)", display: "flex" }}>
+            <SkympArrowButtonIcon color={fillColor} />
           </div>
 
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympEmailIcon</h3>
-            <SkympEmailIcon />
+          <div style={{ transform: "rotate(-90deg)", display: "flex" }}>
+            <SkympArrowButtonIcon color={fillColor} />
+          </div>
+
+          <div style={{ transform: "rotate(90deg)", display: "flex" }}>
+            <SkympArrowButtonIcon color={fillColor} />
           </div>
         </div>
 
-        <div className="story-icons__group">
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympEyeIcon</h3>
-            <SkympEyeIcon isOpen={boolean("SkympEyeIcon: isOpen", false)} />
+        <div
+          className="story-skymp-arrow-button-icon__example"
+          style={{
+            color: fillColor
+          }}
+        >
+          <div style={{ display: "flex" }}>
+            <SkympArrowButtonIcon />
           </div>
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympInviteCodeIcon</h3>
-            <SkympInviteCodeIcon />
-          </div>
-          <div className="story-icons__icon-wrapper">
-            <h3>SkympPasswordIcon</h3>
-            <SkympPasswordIcon />
+          <p>{textState}</p>
+          <div style={{ transform: "rotate(-180deg)", display: "flex" }}>
+            <SkympArrowButtonIcon />
           </div>
         </div>
       </div>
@@ -62,78 +113,208 @@ stories.add(
   },
   {
     info: {
-      inline: true,
-      text: "Note"
+      inline: true
     }
   }
 );
 
 stories.add(
-  "icon",
+  "SkympCheckboxIcon",
   () => {
-    return <SkympArrowButtonIcon className={text("class", "s")} />;
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
+    const isChecked = boolean("isChecked", true);
+
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper story-skymp-checkbox-icon__wrapper">
+          <div>
+            <code>isChecked = true</code>
+            <SkympCheckboxIcon isChecked={true} />
+          </div>
+          <div>
+            <code>isChecked = false</code>
+            <SkympCheckboxIcon isChecked={false} />
+          </div>
+        </div>
+
+        <div
+          className="story-icons__example story-skymp-checkbox-icon__example"
+          onClick={action("icon checked")}
+          style={{ color: fillColor }}
+        >
+          <SkympCheckboxIcon isChecked={isChecked} />
+          <div>Label</div>
+        </div>
+      </div>
+    );
   },
   {
-    info: { inline: true, text: "Note 2" }
+    info: {
+      inline: true
+    }
   }
 );
 
-export interface Custom {
-  style?: object;
-  name?: string;
-}
-
-export const SVGCustom = (props: Custom) => {
-  return (
-    <svg {...props}>
-      <g></g>
-    </svg>
-  );
-};
-
-stories.add("svgcustom", () => <SVGCustom />, {
-  info: { inline: true, text: "text some" }
-});
-
-export interface Clone {
-  name: string;
-  age: number;
-}
-
-export const Cline = SkympArrowButtonIcon;
 stories.add(
-  "clone",
+  "SkympDragonbornIcon",
   () => {
-    return <Cline style={{ color: "red" }} />;
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
+
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper story-skymp-dragonborn-icon__wrapper">
+          <SkympDragonbornIcon />
+          Dragonborn
+        </div>
+
+        <div
+          className="story-icons__example story-icons__input"
+          style={{ color: fillColor }}
+        >
+          <SkympDragonbornIcon />
+          <input
+            type="text"
+            placeholder="Placeholder"
+            style={{ color: fillColor }}
+          ></input>
+        </div>
+      </div>
+    );
   },
-  { info: { inline: true, text: "age name text" } }
+  {
+    info: {
+      inline: true
+    }
+  }
 );
 
-// export default {
-//   component: Icons,
-//   title: "Icons",
-//   excludeStories: /.*Data$/
-// };
+stories.add(
+  "SkympEmailIcon",
+  () => {
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
 
-// export const Default = () => (
-//   <Icons>
-//     <SkympArrowButtonIcon />
-//     <SkympCheckboxIcon />
-//     <SkympDragonbornIcon />
-//     <SkympEmailIcon />
-//     <SkympEyeIcon />
-//     <SkympInviteCodeIcon />
-//     <SkympPasswordIcon />
-//   </Icons>
-// );
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper">
+          <SkympEmailIcon />
+        </div>
 
-// export const ArrowButton = () => (
-//   <Icons>
-//     <SkympArrowButtonIcon />
-//   </Icons>
-// );
-// export const Checkbox = () => (
-//   <Icons>
-//     <SkympCheckboxIcon />
-//   </Icons>
-// );
+        <div
+          className="story__example story-icons__input"
+          style={{ color: fillColor }}
+        >
+          <SkympEmailIcon />
+          <input
+            type="text"
+            placeholder="dragonborn@skymp.com"
+            style={{ color: fillColor }}
+          ></input>
+        </div>
+      </div>
+    );
+  },
+  {
+    info: {
+      inline: true
+    }
+  }
+);
+
+stories.add(
+  "SkympEyeIcon",
+  () => {
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
+    const isOpen = boolean("isOpen", false);
+
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper">
+          <SkympEyeIcon />
+        </div>
+
+        <div
+          className="story-icons__example story-icons__input"
+          style={{ color: fillColor }}
+        >
+          <SkympEyeIcon isOpen={isOpen} onClick={action("clicked icon")} />
+          <input
+            type={isOpen ? "text" : "password"}
+            placeholder="Password"
+            style={{ color: fillColor }}
+          ></input>
+        </div>
+      </div>
+    );
+  },
+  {
+    info: {
+      inline: true
+    }
+  }
+);
+
+stories.add(
+  "SkympInviteCodeIcon",
+  () => {
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
+
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper">
+          <SkympInviteCodeIcon />
+        </div>
+
+        <div
+          className="story-icons__example story-icons__input"
+          style={{ color: fillColor }}
+        >
+          <SkympInviteCodeIcon />
+          <input
+            type="text"
+            placeholder="123456"
+            style={{ color: fillColor }}
+          ></input>
+        </div>
+      </div>
+    );
+  },
+  {
+    info: {
+      inline: true
+    }
+  }
+);
+
+stories.add(
+  "SkympPasswordIcon",
+  () => {
+    const fillColor = color("color", "rgba(var(--skymp-second-color), 1)");
+    const isOpen = boolean("isOpen", false);
+
+    return (
+      <div className="story-icons story-icons__story">
+        <div className="story-icons__wrapper">
+          <SkympPasswordIcon />
+        </div>
+
+        <div
+          className="story-icons__example story-icons__input"
+          style={{ color: fillColor }}
+        >
+          <SkympEyeIcon isOpen={isOpen} onClick={action("clicked icon")} />
+          <input
+            type={isOpen ? "text" : "password"}
+            placeholder="Password"
+            style={{ color: fillColor }}
+          ></input>
+          <SkympPasswordIcon style={{ marginLeft: "1rem" }} />
+        </div>
+      </div>
+    );
+  },
+  {
+    info: {
+      inline: true
+    }
+  }
+);

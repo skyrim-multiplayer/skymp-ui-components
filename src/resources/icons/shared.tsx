@@ -1,13 +1,6 @@
 import React from "react";
 
-export interface SkympIconSVGProps {
-  className?: string;
-  style?: React.CSSProperties;
-  SVGProps?: React.SVGProps<SVGSVGElement>;
-  children?: React.ReactChild;
-}
-
-export const IconSVG = (props: SkympIconSVGProps) => (
+export const IconSVG = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -20,7 +13,7 @@ export const IconSVG = (props: SkympIconSVGProps) => (
       fillRule: "evenodd",
       clipRule: "evenodd"
     }}
-    {...props.SVGProps}
+    {...props}
   >
     {props.children}
   </svg>
