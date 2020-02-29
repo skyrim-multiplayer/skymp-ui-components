@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IconSVG } from "./shared";
+import { IconSVG } from "../shared";
 
 export const SkympInviteCodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <IconSVG {...props} viewBox="0 0 2.41 1.06">

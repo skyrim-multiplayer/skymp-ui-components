@@ -1,6 +1,6 @@
 import React from "react";
 
-import { IconSVG } from "./shared";
+import { IconSVG } from "../shared";
 
 export const SkympPasswordIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <IconSVG

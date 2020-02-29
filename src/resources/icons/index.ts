@@ -1,9 +1,9 @@
-export * from "./arrow-button";
-export * from "./checkbox";
-export * from "./dragonborn";
-export * from "./email";
-export * from "./eye";
-export * from "./invite-code";
-export * from "./password";
+export * from "./components/arrow-button";
+export * from "./components/checkbox";
+export * from "./components/dragonborn";
+export * from "./components/email";
+export * from "./components/eye";
+export * from "./components/invite-code";
+export * from "./components/password";
 
 export * from "./shared";
