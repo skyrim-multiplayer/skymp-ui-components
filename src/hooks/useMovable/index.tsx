@@ -12,11 +12,11 @@ export interface UseMovableProps {
   /**
    * React.Dispatch function for set left state
    */
-  setLeft: React.Dispatch<number>;
+  setLeft: React.Dispatch<React.SetStateAction<number>>;
   /**
    * React.Dispatch function for set top state
    */
-  setTop: React.Dispatch<number>;
+  setTop: React.Dispatch<React.SetStateAction<number>>;
   /**
    * toggle of movable component state
    */
@@ -57,14 +57,18 @@ export const useMovable = (props: UseMovableProps) => {
   }) => {
     const dragHandler =
       isMovable && props.isMovableComponent
-        ? (e: MouseEvent) => {
+        ? (
+            event: React.MouseEvent<HTMLDivElement, MouseEvent> | MouseEvent
+          ) => {
             if (hasMoveStart) {
-              if (e.buttons === 0) dragEndHandler();
+              if (event.buttons === 0) dragEndHandler();
               else {
                 setHasMove(true);
-                if (e.clientY !== 0 && e.clientX !== 0) {
-                  if (isAxisX) props.setLeft(e.clientX - oldPositionMove.left);
-                  if (isAxisY) props.setTop(e.clientY - oldPositionMove.top);
+                if (event.clientY !== 0 && event.clientX !== 0) {
+                  if (isAxisX)
+                    props.setLeft(event.clientX - oldPositionMove.left);
+                  if (isAxisY)
+                    props.setTop(event.clientY - oldPositionMove.top);
                 }
               }
             }
@@ -75,13 +79,17 @@ export const useMovable = (props: UseMovableProps) => {
 
     const dragStartHandler =
       isMovable && props.isMovableComponent
-        ? (e: MouseEvent | DragEvent) => {
+        ? (
+            event:
+              | React.MouseEvent<HTMLDivElement, MouseEvent>
+              | DragEvent<Element>
+          ) => {
             window.addEventListener("mousemove", dragHandler);
             setHasMoveEnd(false);
             setHasMoveStart(true);
             setOldPositionMove({
-              left: e.clientX - props.left,
-              top: e.clientY - props.top
+              left: event.clientX - props.left,
+              top: event.clientY - props.top
             });
           }
         : () => {
@@ -109,7 +117,7 @@ export const useMovable = (props: UseMovableProps) => {
       : {
           draggable: isMovable && props.isMovableComponent,
           onDrag: dragHandler,
-          onDragStart: (e: DragEvent) => {
+          onDragStart: (e: DragEvent<Element>) => {
             e.dataTransfer.setDragImage(new Image(), 0, 0);
             dragStartHandler(e);
           },
@@ -117,7 +125,7 @@ export const useMovable = (props: UseMovableProps) => {
         };
   };
 
-  return [createDragMove, { hasMove, hasMoveStart, hasMoveEnd }];
+  return [createDragMove, hasMove, hasMoveStart, hasMoveEnd] as const;
 };
 
 export default useMovable;
