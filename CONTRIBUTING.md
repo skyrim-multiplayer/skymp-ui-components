@@ -49,7 +49,7 @@ Storybook will available on localhost on port that point in package.json
 * ``npm run lint`` checks the code style
 * ``npm test`` runs the complete test suite
 * ``npm pretty`` runs **prettier** with autofix
-* ``npm run storybook`` builds and runs the storybook on localhost
+* ``npm run storybook`` builds and runs the **storybook** on localhost
 
 More scripts see in package.json
 
