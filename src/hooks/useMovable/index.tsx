@@ -2,11 +2,11 @@ import { useState, DragEvent } from "react";
 
 export interface UseMovableProps {
   /**
-   * left component property
+   * initial left component property
    */
   left: number;
   /**
-   * top component property
+   * initial top component property
    */
   top: number;
   /**
@@ -117,9 +117,9 @@ export const useMovable = (props: UseMovableProps) => {
       : {
           draggable: isMovable && props.isMovableComponent,
           onDrag: dragHandler,
-          onDragStart: (e: DragEvent<Element>) => {
-            e.dataTransfer.setDragImage(new Image(), 0, 0);
-            dragStartHandler(e);
+          onDragStart: (event: DragEvent<Element>) => {
+            event.dataTransfer.setDragImage(new Image(), 0, 0);
+            dragStartHandler(event);
           },
           onDragEnd: dragEndHandler
         };
