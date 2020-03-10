@@ -63,7 +63,7 @@ export interface UseResizableProps {
   /**
    * toggle of resizable component state
    */
-  isResizableComponent?: boolean;
+  isResizable: boolean;
 }
 
 /**
@@ -72,7 +72,6 @@ export interface UseResizableProps {
 export const useResizable = ({
   minWidth = 0,
   minHeight = 0,
-  isResizableComponent = true,
   ...props
 }: UseResizableProps) => {
   const [oldCursorPosition, setOldCursorPosition] = useState({ X: 0, Y: 0 });
@@ -131,7 +130,7 @@ export const useResizable = ({
     }
 
     const dragHandler =
-      isResizable && isResizableComponent
+      isResizable && props.isResizable
         ? (
             event: React.MouseEvent<HTMLDivElement, MouseEvent> | MouseEvent
           ) => {
@@ -174,7 +173,7 @@ export const useResizable = ({
           };
 
     const dragStartHandler =
-      isResizable && isResizableComponent
+      isResizable && props.isResizable
         ? (
             event:
               | React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -189,7 +188,7 @@ export const useResizable = ({
           };
 
     const dragEndHandler =
-      isResizable && isResizableComponent
+      isResizable && props.isResizable
         ? () => {
             setHasResizeStart(false);
             setHasResize(false);
@@ -206,7 +205,7 @@ export const useResizable = ({
           onMouseUp: dragEndHandler
         }
       : {
-          draggable: isResizable && isResizableComponent,
+          draggable: isResizable && props.isResizable,
           onDrag: dragHandler,
           onDragStart: (event: DragEvent<Element>) => {
             event.dataTransfer.setDragImage(new Image(), 0, 0);
@@ -216,7 +215,7 @@ export const useResizable = ({
         };
   };
 
-  return [createDragResize, { hasResizeStart, hasResize, hasResizeEnd }];
+  return [createDragResize, hasResizeStart, hasResize, hasResizeEnd ] as const;
 };
 
 export default useResizable;

@@ -23,7 +23,7 @@ stories.add("Overview", () => {
       top: topState,
       setLeft: setLeftState,
       setTop: setTopState,
-      isMovableComponent: isMovable
+      isMovable
     });
 
     useEffect(() => {
@@ -40,14 +40,17 @@ stories.add("Overview", () => {
 
     return (
       <div
-        className={`story-usemovable__dnd-component ${hasMove ? "story-usemovable_grabbing" : ""}`}
+        className={`story-usemovable__dnd-component ${
+          hasMove ? "story-usemovable_grabbing" : ""
+        }`}
         style={{
           left: leftState,
           top: topState
         }}
-        {...createDragMove({isMouseEvents: true })}
-
-      ><h2>Drag me</h2></div>
+        {...createDragMove({ isMouseEvents: true })}
+      >
+        <h2>Drag me</h2>
+      </div>
     );
   };
 

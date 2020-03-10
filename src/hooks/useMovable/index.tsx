@@ -20,16 +20,11 @@ export interface UseMovableProps {
   /**
    * toggle of movable component state
    */
-  isMovableComponent?: boolean;
+  isMovable: boolean;
 }
 
 /**
  * @description hook makes an component moveable and/or draggable
- * @param left left component property
- * @param top top component property
- * @param setLeft React.Dispatch function for set left state
- * @param setTop React.Dispatch function for set top state
- * @param isMovableComponent toggle of movable component state
  */
 export const useMovable = (props: UseMovableProps) => {
   const [oldPositionMove, setOldPositionMove] = useState({ left: 0, top: 0 });
@@ -56,7 +51,7 @@ export const useMovable = (props: UseMovableProps) => {
     isAxisY?: boolean;
   }) => {
     const dragHandler =
-      isMovable && props.isMovableComponent
+      isMovable && props.isMovable
         ? (
             event: React.MouseEvent<HTMLDivElement, MouseEvent> | MouseEvent
           ) => {
@@ -78,7 +73,7 @@ export const useMovable = (props: UseMovableProps) => {
           };
 
     const dragStartHandler =
-      isMovable && props.isMovableComponent
+      isMovable && props.isMovable
         ? (
             event:
               | React.MouseEvent<HTMLDivElement, MouseEvent>
@@ -97,7 +92,7 @@ export const useMovable = (props: UseMovableProps) => {
           };
 
     const dragEndHandler =
-      isMovable && props.isMovableComponent
+      isMovable && props.isMovable
         ? () => {
             window.removeEventListener("mousemove", dragHandler);
             setHasMove(false);
@@ -115,7 +110,7 @@ export const useMovable = (props: UseMovableProps) => {
           onMouseUp: dragEndHandler
         }
       : {
-          draggable: isMovable && props.isMovableComponent,
+          draggable: isMovable && props.isMovable,
           onDrag: dragHandler,
           onDragStart: (event: DragEvent<Element>) => {
             event.dataTransfer.setDragImage(new Image(), 0, 0);
