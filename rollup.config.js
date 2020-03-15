@@ -6,6 +6,7 @@ import resolve from "rollup-plugin-node-resolve";
 import url from "rollup-plugin-url";
 import svgr from "@svgr/rollup";
 import { terser } from "rollup-plugin-terser";
+import copy from "rollup-plugin-copy";
 
 import pkg from "./package.json";
 
@@ -43,6 +44,9 @@ export default {
       exclude: ["src/**/*.stories.tsx", "src/**/*.test.(tsx|ts)"]
     }),
     commonjs(),
-    terser()
+    terser(),
+    copy({
+      targets: [{ src: "src/resources/fonts", dest: "dist/resources/fonts" }]
+    })
   ]
 };
