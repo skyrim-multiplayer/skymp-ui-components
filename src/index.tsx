@@ -2,7 +2,7 @@ import React from "react";
 
 import { SkympWindow } from "./components/skymp-window";
 
-import "./resources/styles/index.scss";
+import "./style.scss";
 
 export { SkympWindow };
 

@@ -3,7 +3,7 @@ import { addDecorator } from "@storybook/react";
 import { withInfo } from "@storybook/addon-info";
 import { withKnobs } from "@storybook/addon-knobs";
 
-import "../src/resources/styles/index.scss";
+import "../src/style.scss";
 
 const req = require.context("../src", true, /\.stories\.tsx$/);
 
