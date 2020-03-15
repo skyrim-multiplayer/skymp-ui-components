@@ -47,7 +47,7 @@ export default {
     terser(),
     copy({
       targets: [
-        { src: "src/resources/fonts", dest: "dist/resources" }
+        { src: "src/fonts", dest: "dist" }
       ]
     })
   ]
