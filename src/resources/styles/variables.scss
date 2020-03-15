@@ -1,0 +1,17 @@
+:root {
+  /*
+    Colors
+    How to use?
+    color: rgba(var(--skymp-background-color), var(--skymp-background-opacity))
+  */
+  --skymp-main-color: 255, 255, 255;
+  --skymp-second-color: 157, 158, 158;
+  --skymp-background-color: 0, 0, 0;
+
+  // fonts
+  --skymp-header-font: "BankirRetro";
+  --skymp-content-font: "FuturaCondencedNormal";
+
+  // other
+  --skymp-background-opacity: 0.8;
+}

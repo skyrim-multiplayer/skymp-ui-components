@@ -1,0 +1,128 @@
+.story-icons {
+  padding: 2rem;
+  font-family: var(--skymp-content-font);
+}
+
+.story-icons__all {
+  & h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  & > * {
+    margin: 0 1.25rem;
+  }
+
+  font-size: 12em;
+  display: flex;
+  flex-flow: row wrap;
+  align-content: space-between;
+}
+
+
+.story-icons__wrapper {
+  display: flex;
+  font-size: 12rem;
+  align-items: center;
+}
+
+.story-icons__input {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid currentColor;
+  padding: 0.25rem;
+  font-size: 3rem;
+  & input {
+    &,
+    &:hover,
+    &:active {
+      outline: none;
+      border: none;
+      &::placeholder {
+        opacity: 0.6;
+        color: currentColor;
+      }
+    };
+
+    font-size: 3rem;
+    margin-left: 1rem;
+  }
+}
+
+.story-icons__example {
+  margin-top: 2rem;
+}
+
+.story-icons__story {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.story-skymp-arrow-button-icon {
+  &__wrapper {
+    justify-content: space-between;
+  }
+
+  &__example {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    font-size: 6rem;
+    justify-content: center;
+    cursor: pointer;
+    margin-top: 3rem;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    & p {
+      margin: 0;
+    }
+  }
+}
+
+.story-skymp-checkbox-icon {
+  &__example {
+    cursor: pointer;
+    margin-top: 4rem;
+    font-size: 10rem;
+    display: flex;
+    align-items: center;
+
+    & > svg {
+      margin-right: 1rem;
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    justify-content: space-around;
+
+    & code {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+
+.story-skymp-dragonborn-icon {
+  &__wrapper {
+    & > svg {
+      font-size: 20rem;
+      position: absolute;
+      left: 50%;
+      z-index: -1;
+      opacity: 0.4;
+    }
+  }
+}

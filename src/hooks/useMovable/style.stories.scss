@@ -1,0 +1,30 @@
+.story-usemovable {
+  font-size: 4rem;
+
+  &__dnd-component {
+    background: rgba(0,0,0,0.6);
+    color: white;
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    font-family: var(--skymp-header-font);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: grab;
+
+    &:hover {
+      border: 1px solid red;
+    }
+
+    &:active {
+      cursor: grabbing !important;
+      cursor: --webkit-grabbing !important;
+    }
+  }
+
+  &_grabbing {
+    cursor: grabbing !important;
+    cursor: --webkit-grabbing !important;
+  }
+}
