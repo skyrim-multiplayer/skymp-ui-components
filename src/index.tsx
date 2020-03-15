@@ -1,6 +1,10 @@
 import React from "react";
 
+import { SkympWindow } from "./components/skymp-window";
+
 import "./resources/styles/index.scss";
+
+export { SkympWindow };
 
 export const Hello = () => {
   return (
