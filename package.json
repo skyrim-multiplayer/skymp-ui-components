@@ -41,8 +41,8 @@
     "test": "jest --setupFiles ./setupTests.ts --passWithNoTests ",
     "test:generate-output": "jest --setupFiles ./setupTests.ts --json --outputFile=.jest-test-results.json",
     "storybook": "concurrently \"npm run test:generate-output -- --watch\" \"start-storybook -p 9009 -s public\"",
-    "build-storybook": "build-storybook -s public -o .storybook-static",
-    "build-storybook:docs": "build-storybook -s public --docs -o .storybook-docs",
+    "storybook:build": "build-storybook -s public -o .storybook-static",
+    "storybook:build-docs": "build-storybook -s public --docs -o .storybook-docs",
     "prepare": "npm run build && node scripts/prepublish.js",
     "predeploy": "npm run build-storybook:docs",
     "deploy": "gh-pages -d .storybook-docs"
