@@ -6,7 +6,10 @@ export interface SkympCheckboxSVGProps extends React.SVGProps<SVGSVGElement> {
   isChecked?: boolean;
 }
 
-export const SkympCheckboxIcon = (props: SkympCheckboxSVGProps) => {
+export const SkympCheckboxIcon = ({
+  isChecked,
+  ...props
+}: SkympCheckboxSVGProps) => {
   return (
     <IconSVG
       {...props}
@@ -25,7 +28,7 @@ export const SkympCheckboxIcon = (props: SkympCheckboxSVGProps) => {
           rx="0.11"
           ry="0.11"
         />
-        {props.isChecked && (
+        {isChecked && (
           <path
             stroke="none"
             fill="currentColor"
