@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SkympCheckboxIcon \`isChecked\` prop is false 1`] = `
+<Component
+  isChecked={false}
+>
+  <Component
+    strokeMiterlimit="22.9256"
+    strokeWidth="0.05"
+    viewBox="0 0 0.61 0.63"
+  >
+    <svg
+      height="1em"
+      strokeMiterlimit="22.9256"
+      strokeWidth="0.05"
+      style={
+        Object {
+          "clipRule": "evenodd",
+          "fillRule": "evenodd",
+          "shapeRendering": "geometricPrecision",
+          "textRendering": "geometricPrecision",
+        }
+      }
+      viewBox="0 0 0.61 0.63"
+      width="1em"
+      xmlSpace="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g>
+        <rect
+          fill="none"
+          height="0.54"
+          rx="0.11"
+          ry="0.11"
+          stroke="currentColor"
+          width="0.54"
+          x="0.03"
+          y="0.06"
+        />
+      </g>
+    </svg>
+  </Component>
+</Component>
+`;
+
+exports[`SkympCheckboxIcon \`isChecked\` prop is true 1`] = `
+<Component
+  isChecked={true}
+>
+  <Component
+    strokeMiterlimit="22.9256"
+    strokeWidth="0.05"
+    viewBox="0 0 0.61 0.63"
+  >
+    <svg
+      height="1em"
+      strokeMiterlimit="22.9256"
+      strokeWidth="0.05"
+      style={
+        Object {
+          "clipRule": "evenodd",
+          "fillRule": "evenodd",
+          "shapeRendering": "geometricPrecision",
+          "textRendering": "geometricPrecision",
+        }
+      }
+      viewBox="0 0 0.61 0.63"
+      width="1em"
+      xmlSpace="preserve"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g>
+        <rect
+          fill="none"
+          height="0.54"
+          rx="0.11"
+          ry="0.11"
+          stroke="currentColor"
+          width="0.54"
+          x="0.03"
+          y="0.06"
+        />
+        <path
+          d="M0.31 0.37l-0.1 -0.11c-0.01,-0.01 -0.01,-0.01 -0.01,-0.01l-0.04 -0.05c-0.03,-0.04 -0.09,0.01 -0.05,0.05 0,0 0.01,0.01 0.01,0.01l0.1 0.11c0.01,0.01 0.01,0.01 0.02,0.02 0,0 0.01,0.01 0.01,0.01l0.03 0.04c0.01,0.01 0.02,0.02 0.03,0.03 0.02,0.01 0.04,-0 0.05,-0.02 0.01,-0.02 0.02,-0.03 0.03,-0.05 0.01,-0.01 0.02,-0.03 0.03,-0.04 0.01,-0.02 0.02,-0.03 0.03,-0.05l0.15 -0.22c0.01,-0.02 0.03,-0.03 0.03,-0.05 0,-0.03 -0.03,-0.04 -0.05,-0.03 -0.02,0.01 -0.03,0.03 -0.04,0.05 -0.01,0.02 -0.02,0.03 -0.03,0.05l-0.18 0.27z"
+          fill="currentColor"
+          stroke="none"
+        />
+      </g>
+    </svg>
+  </Component>
+</Component>
+`;
