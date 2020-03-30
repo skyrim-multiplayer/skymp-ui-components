@@ -26,6 +26,10 @@
     "node_modules",
     "build",
     "dist",
+    "coverage",
+    ".storybook-static",
+    ".storybook-docs",
+    "scripts",
     "rollup.config.js",
     "webpack.config.js",
     "jest.config.js"
