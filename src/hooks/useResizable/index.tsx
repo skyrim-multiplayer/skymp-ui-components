@@ -215,7 +215,7 @@ export const useResizable = ({
         };
   };
 
-  return [createDragResize, hasResizeStart, hasResize, hasResizeEnd ] as const;
+  return [createDragResize, hasResizeStart, hasResize, hasResizeEnd] as const;
 };
 
 export default useResizable;

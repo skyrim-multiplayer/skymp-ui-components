@@ -46,9 +46,7 @@ export default {
     commonjs(),
     terser(),
     copy({
-      targets: [
-        { src: "src/fonts", dest: "dist" }
-      ]
+      targets: [{ src: "src/fonts", dest: "dist" }]
     })
   ]
 };

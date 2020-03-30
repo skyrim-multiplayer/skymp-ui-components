@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-interface SkympEyeSVGProps extends React.SVGProps<SVGSVGElement> {
+export interface SkympEyeSVGProps extends React.SVGProps<SVGSVGElement> {
   isOpen?: boolean;
 }
 
