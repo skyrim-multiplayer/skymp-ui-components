@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { storiesOf } from "@storybook/react";
 import { boolean, number } from "@storybook/addon-knobs";
 import { action } from "@storybook/addon-actions";
 
@@ -7,9 +6,11 @@ import { useMovable } from "./index";
 
 import "./style.stories.scss";
 
-const stories = storiesOf("useMovable", module);
+export default {
+  title: "Hooks/useMovable"
+};
 
-stories.add("Overview", () => {
+export const Default = () => {
   const left: number = number("left (px)", 50);
   const top: number = number("top (px)", 50);
   const isMovable: boolean = boolean("isMovableComponent", true);
@@ -59,4 +60,4 @@ stories.add("Overview", () => {
       <DragComponent left={left} top={top} />
     </div>
   );
-});
+};
