@@ -29,9 +29,9 @@ export const Default = () => {
 
   const scale = number("scale", 1);
 
-  const isTrue = boolean("isTrue", false)
+  const isTrue = boolean("isTrue", false);
 
-  const [isStyle, setIsStyle] = React.useState(false)
+  const [isStyle, setIsStyle] = React.useState(false);
 
   return (
     <div>
@@ -46,21 +46,30 @@ export const Default = () => {
         // minWidth={minWidth}
         // minHeight={minHeight}
         scale={scale}
-        content={<Child isTrue={isTrue} isStyle={isStyle}  setIsStyle={setIsStyle}/>}
+        content={
+          <Child isTrue={isTrue} isStyle={isStyle} setIsStyle={setIsStyle} />
+        }
       />
     </div>
   );
 };
 
-const Child = ({ isTrue, isStyle, setIsStyle } : {isTrue: boolean, isStyle: boolean, setIsStyle: Function}) => {
-
+const Child = ({
+  isTrue,
+  isStyle,
+  setIsStyle
+}: {
+  isTrue: boolean;
+  isStyle: boolean;
+  setIsStyle: Function;
+}) => {
   return (
     <div>
       {isTrue && <div style={{ width: "320px", height: "220px" }}>Hi</div>}
       {!isTrue && (
         <div
           className="testest"
-          style={isStyle ? {minWidth: "300px", minHeight: "300px"} : {}}
+          style={isStyle ? { minWidth: "300px", minHeight: "300px" } : {}}
           onClick={() => setIsStyle(!isStyle)}
         >
           <p style={{ color: "green" }}>Hello</p>

@@ -6,10 +6,7 @@ export interface CheckboxSVGProps extends React.SVGProps<SVGSVGElement> {
   isChecked?: boolean;
 }
 
-export const CheckboxIcon = ({
-  isChecked,
-  ...props
-}: CheckboxSVGProps) => {
+export const CheckboxIcon = ({ isChecked, ...props }: CheckboxSVGProps) => {
   return (
     <IconSVG
       {...props}

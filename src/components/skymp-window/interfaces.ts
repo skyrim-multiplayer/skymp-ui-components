@@ -8,8 +8,7 @@ export interface WindowNodes {
 export type TWindowGradient =
   | React.ReactElement<React.SVGProps<SVGLinearGradientElement>>
   | React.ReactElement<React.SVGProps<SVGRadialGradientElement>>
-  | React.ReactElement<React.SVGProps<SVGGradientElement>>
-
+  | React.ReactElement<React.SVGProps<SVGGradientElement>>;
 
 export interface WindowSizePosition {
   top?: number;

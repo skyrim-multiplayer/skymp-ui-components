@@ -5,7 +5,7 @@ import { TWindowGradient } from "./interfaces";
 import { LinearGradient } from "./linear-gradient";
 import { FrameCornerSvg } from "./corner";
 
-import "./style.scss"
+import "./style.scss";
 
 export interface ContentSvgProps {
   id: string;

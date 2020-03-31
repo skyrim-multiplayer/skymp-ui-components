@@ -8,7 +8,7 @@ import React, {
 
 import { useWindow } from "../../hooks/useWindow";
 
-import {TWindowGradient, WindowNodes, WindowSizePosition} from "./interfaces"
+import { TWindowGradient, WindowNodes, WindowSizePosition } from "./interfaces";
 import { SystemWindow } from "./system-window";
 
 export enum WindowType {
@@ -20,14 +20,14 @@ export enum WindowType {
 const SYSTEM_WINDOW_WIDTH = 1275; // px
 const SYSTEM_WINDOW_HEIGHT = 680; // px
 
-export interface WindowProps extends WindowNodes, WindowSizePosition{
+export interface WindowProps extends WindowNodes, WindowSizePosition {
   type?: WindowType;
 
   isMovable?: boolean;
   isResizable?: boolean;
 
-  frameGradientSvg?: TWindowGradient,
-  backgroundGradientSvg?: TWindowGradient
+  frameGradientSvg?: TWindowGradient;
+  backgroundGradientSvg?: TWindowGradient;
 }
 
 export const Window = ({
@@ -64,7 +64,7 @@ export const Window = ({
   });
 
   useEffect(() => {
-    console.log("BIG EFF")
+    console.log("BIG EFF");
     if (isLayoutEffect) {
       if (type === WindowType.default) {
         if (props.width === undefined) {
@@ -85,8 +85,8 @@ export const Window = ({
     }
   }, [isLayoutEffect, props.height, props.width, type, win, ref]);
 
-  console.log("win: ", win)
-  console.log("ref: ", ref)
+  console.log("win: ", win);
+  console.log("ref: ", ref);
 
   return (
     <div

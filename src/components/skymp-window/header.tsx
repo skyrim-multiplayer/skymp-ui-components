@@ -22,9 +22,7 @@ export interface HeaderLogoSvgProps {
   y: number;
 }
 
-export const HeaderLogoSvg = (
-  props: HeaderLogoSvgProps
-) => {
+export const HeaderLogoSvg = (props: HeaderLogoSvgProps) => {
   // 60deg
   const marginLeft = useMemo(() => props.heightHeader / Math.sqrt(3), [
     props.heightHeader

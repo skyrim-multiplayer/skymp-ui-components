@@ -1,5 +1,5 @@
 import { useState } from "react";
-import {useMovable, CreateDragMoveArgs} from "../useMovable";
+import { useMovable, CreateDragMoveArgs } from "../useMovable";
 import { useResizable, Direction } from "../useResizable";
 
 export { Direction, CreateDragMoveArgs };

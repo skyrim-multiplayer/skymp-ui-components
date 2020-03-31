@@ -1,8 +1,6 @@
 import React from "react";
 
-export const FrameCornerSvg = (
-  props: React.SVGProps<SVGSVGElement>
-) => {
+export const FrameCornerSvg = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <g {...props} id={props.id}>
       <path d="M10.752 22.354 L10.752,15.908 L12.626 15.908 L12.626 13.729 L7.868 13.729 L7.868 15.908 L7.868 22.354 Z" />
