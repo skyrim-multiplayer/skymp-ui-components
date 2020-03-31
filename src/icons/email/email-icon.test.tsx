@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { SkympEmailIcon } from "./index";
+import { EmailIcon } from "./index";
 
-describe("SkympEmailIcon", () => {
+describe("EmailIcon", () => {
   it("renders without errors", () => {
-    shallow(<SkympEmailIcon />);
+    shallow(<EmailIcon />);
   });
 });

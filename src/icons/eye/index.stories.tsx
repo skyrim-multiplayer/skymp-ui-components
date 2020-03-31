@@ -1,11 +1,11 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs";
 
-import { SkympEyeIcon } from "./index";
+import { EyeIcon } from "./index";
 
 export default {
   title: "Icons/eye",
-  component: SkympEyeIcon,
+  component: EyeIcon,
   parameters: {
     jest: ["eye-icon.test.tsx"]
   }
@@ -14,5 +14,5 @@ export default {
 export const Default = () => {
   const isOpen = boolean("isOpen", true);
 
-  return <SkympEyeIcon isOpen={isOpen} />;
+  return <EyeIcon isOpen={isOpen} />;
 };

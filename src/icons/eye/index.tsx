@@ -2,11 +2,11 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-export interface SkympEyeSVGProps extends React.SVGProps<SVGSVGElement> {
+export interface EyeSVGProps extends React.SVGProps<SVGSVGElement> {
   isOpen?: boolean;
 }
 
-export const SkympEyeIcon = ({ isOpen, ...props }: SkympEyeSVGProps) => (
+export const EyeIcon = ({ isOpen, ...props }: EyeSVGProps) => (
   <IconSVG {...props} viewBox={isOpen ? "0 0 0.17 0.2" : "0 0 3.07 3.08"}>
     <g fill="currentColor" stroke="none">
       {isOpen ? (

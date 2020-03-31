@@ -1,15 +1,15 @@
 import React from "react";
 
-import { SkympEmailIcon } from "./index";
+import { EmailIcon } from "./index";
 
 export default {
   title: "Icons/email",
-  component: SkympEmailIcon,
+  component: EmailIcon,
   parameters: {
     jest: ["email-icon.test.tsx"]
   }
 };
 
 export const Default = () => {
-  return <SkympEmailIcon />;
+  return <EmailIcon />;
 };

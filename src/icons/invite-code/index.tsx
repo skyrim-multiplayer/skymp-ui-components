@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-export const SkympInviteCodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const InviteCodeIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <IconSVG {...props} viewBox="0 0 2.41 1.06">
     <g stroke="none" fill="currentColor">
       <path d="M2.35 0.98c0.1,-0.36 0.07,-0.54 0.01,-0.9l-0.67 0.29 0 0.32 0.66 0.29z" />

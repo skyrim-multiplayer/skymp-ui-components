@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SkympEyeIcon \`isOpen\` prop is false 1`] = `
+exports[`EyeIcon \`isOpen\` prop is false 1`] = `
 <Component
   isOpen={false}
 >
@@ -45,7 +45,7 @@ exports[`SkympEyeIcon \`isOpen\` prop is false 1`] = `
 </Component>
 `;
 
-exports[`SkympEyeIcon \`isOpen\` prop is true 1`] = `
+exports[`EyeIcon \`isOpen\` prop is true 1`] = `
 <Component
   isOpen={true}
 >

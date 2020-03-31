@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { SkympInviteCodeIcon } from "./index";
+import { InviteCodeIcon } from "./index";
 
-describe("SkympInviteCodeIcon", () => {
+describe("InviteCodeIcon", () => {
   it("renders without errors", () => {
-    shallow(<SkympInviteCodeIcon />);
+    shallow(<InviteCodeIcon />);
   });
 });

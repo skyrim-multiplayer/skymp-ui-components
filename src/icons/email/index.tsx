@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-export const SkympEmailIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const EmailIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <IconSVG {...props} viewBox="0 0 1.43 0.89">
     <g stroke="none" fill="currentColor">
       <path

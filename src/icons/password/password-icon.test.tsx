@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { SkympPasswordIcon } from "./index";
+import { PasswordIcon } from "./index";
 
-describe("SkympPasswordIcon", () => {
+describe("PasswordIcon", () => {
   it("renders without errors", () => {
-    shallow(<SkympPasswordIcon />);
+    shallow(<PasswordIcon />);
   });
 });

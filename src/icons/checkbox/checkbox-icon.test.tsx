@@ -2,20 +2,20 @@ import React from "react";
 import { shallow, mount } from "enzyme";
 import { mountToJson } from "enzyme-to-json";
 
-import { SkympCheckboxIcon } from "./index";
+import { CheckboxIcon } from "./index";
 
-describe("SkympCheckboxIcon", () => {
+describe("CheckboxIcon", () => {
   it("renders without errors", () => {
-    shallow(<SkympCheckboxIcon />);
+    shallow(<CheckboxIcon />);
   });
 
   it("`isChecked` prop is true", () => {
-    const wrapper = mount(<SkympCheckboxIcon isChecked={true} />);
+    const wrapper = mount(<CheckboxIcon isChecked={true} />);
     expect(mountToJson(wrapper)).toMatchSnapshot();
   });
 
   it("`isChecked` prop is false", () => {
-    const wrapper = mount(<SkympCheckboxIcon isChecked={false} />);
+    const wrapper = mount(<CheckboxIcon isChecked={false} />);
     expect(mountToJson(wrapper)).toMatchSnapshot();
   });
 });

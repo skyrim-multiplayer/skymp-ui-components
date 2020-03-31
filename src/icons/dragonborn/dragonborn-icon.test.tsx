@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { SkympDragonbornIcon } from "./index";
+import { DragonbornIcon } from "./index";
 
-describe("SkympDragonbornIcon", () => {
+describe("DragonbornIcon", () => {
   it("renders without errors", () => {
-    shallow(<SkympDragonbornIcon />);
+    shallow(<DragonbornIcon />);
   });
 });

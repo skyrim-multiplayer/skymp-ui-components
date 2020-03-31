@@ -1,15 +1,15 @@
 import React from "react";
 
-import { SkympInviteCodeIcon } from "./index";
+import { InviteCodeIcon } from "./index";
 
 export default {
   title: "Icons/invite-code",
-  component: SkympInviteCodeIcon,
+  component: InviteCodeIcon,
   parameters: {
     jest: ["invite-code-icon.test.tsx"]
   }
 };
 
 export const Default = () => {
-  return <SkympInviteCodeIcon />;
+  return <InviteCodeIcon />;
 };

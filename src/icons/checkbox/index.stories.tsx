@@ -1,11 +1,11 @@
 import React from "react";
 import { boolean } from "@storybook/addon-knobs";
 
-import { SkympCheckboxIcon } from "./index";
+import { CheckboxIcon } from "./index";
 
 export default {
   title: "Icons/checkbox",
-  component: SkympCheckboxIcon,
+  component: CheckboxIcon,
   parameters: {
     jest: ["checkbox-icon.test.tsx"]
   }
@@ -14,5 +14,5 @@ export default {
 export const Default = () => {
   const isChecked = boolean("isChecked", true);
 
-  return <SkympCheckboxIcon isChecked={isChecked} />;
+  return <CheckboxIcon isChecked={isChecked} />;
 };

@@ -1,15 +1,15 @@
 import React from "react";
 
-import { SkympDragonbornIcon } from "./index";
+import { DragonbornIcon } from "./index";
 
 export default {
   title: "Icons/dragonborn",
-  component: SkympDragonbornIcon,
+  component: DragonbornIcon,
   parameters: {
     jest: ["dragonborn-icon.test.tsx"]
   }
 };
 
 export const Default = () => {
-  return <SkympDragonbornIcon />;
+  return <DragonbornIcon />;
 };

@@ -2,14 +2,14 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-export interface SkympCheckboxSVGProps extends React.SVGProps<SVGSVGElement> {
+export interface CheckboxSVGProps extends React.SVGProps<SVGSVGElement> {
   isChecked?: boolean;
 }
 
-export const SkympCheckboxIcon = ({
+export const CheckboxIcon = ({
   isChecked,
   ...props
-}: SkympCheckboxSVGProps) => {
+}: CheckboxSVGProps) => {
   return (
     <IconSVG
       {...props}

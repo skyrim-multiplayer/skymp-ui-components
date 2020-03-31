@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SkympCheckboxIcon \`isChecked\` prop is false 1`] = `
+exports[`CheckboxIcon \`isChecked\` prop is false 1`] = `
 <Component
   isChecked={false}
 >
@@ -44,7 +44,7 @@ exports[`SkympCheckboxIcon \`isChecked\` prop is false 1`] = `
 </Component>
 `;
 
-exports[`SkympCheckboxIcon \`isChecked\` prop is true 1`] = `
+exports[`CheckboxIcon \`isChecked\` prop is true 1`] = `
 <Component
   isChecked={true}
 >

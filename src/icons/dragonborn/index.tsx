@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-export const SkympDragonbornIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const DragonbornIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <IconSVG {...props} viewBox="0 0 3.94 2.13">
     <path
       stroke="none"
