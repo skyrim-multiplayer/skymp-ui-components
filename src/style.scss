@@ -1,2 +1,10 @@
 @import "./variables.scss";
 @import "./fonts.scss";
+
+.testest {
+  min-width: 200px;
+  min-height: 200px;
+  max-height: 400px;
+  max-width: 400px;
+  // transition: 1s ease min-height, 1s ease min-width;
+}

@@ -1,10 +1,10 @@
 import React from "react";
 
-import { SkympWindow } from "./components/skymp-window";
+import { Window } from "./components/skymp-window";
 
 import "./style.scss";
 
-export { SkympWindow };
+export { Window };
 
 export const Hello = () => {
   return (

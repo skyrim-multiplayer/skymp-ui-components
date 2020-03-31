@@ -23,6 +23,13 @@ export interface UseMovableProps {
   isMovable: boolean;
 }
 
+export interface CreateDragMoveArgs {
+  isMouseEvents?: boolean;
+  isMovable?: boolean;
+  isAxisX?: boolean;
+  isAxisY?: boolean;
+}
+
 /**
  * @description hook makes an component moveable and/or draggable
  */
@@ -44,12 +51,7 @@ export const useMovable = (props: UseMovableProps) => {
     isMovable = true,
     isAxisX = true,
     isAxisY = true
-  }: {
-    isMouseEvents?: boolean;
-    isMovable?: boolean;
-    isAxisX?: boolean;
-    isAxisY?: boolean;
-  }) => {
+  }: CreateDragMoveArgs) => {
     const dragHandler =
       isMovable && props.isMovable
         ? (

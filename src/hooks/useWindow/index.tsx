@@ -1,8 +1,8 @@
 import { useState } from "react";
-import useMovable from "../useMovable";
+import {useMovable, CreateDragMoveArgs} from "../useMovable";
 import { useResizable, Direction } from "../useResizable";
 
-export { Direction };
+export { Direction, CreateDragMoveArgs };
 
 export interface UseWindowProps {
   /**

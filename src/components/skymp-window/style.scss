@@ -1,9 +1,9 @@
 .skymp-window {
   display: flex;
-  position: absolute;
   flex-direction: column;
   align-items: center;
-  & .frame {
+
+  &__frame {
     &-corners {
       stroke: none;
     }
@@ -12,16 +12,27 @@
     }
   }
 
-  & .background {
-    -webkit-clip-path: url("#clip-polygon");
-    clip-path: url("#clip-polygon");
-  }
 
-  & .logo,
-  & .header,
-  & .content,
-  & .footer {
+  &__logo,
+  &__header,
+  &__content,
+  &__footer {
     overflow: hidden;
     z-index: 1;
+  }
+}
+
+.dash {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 1s infinite linear ;
+}
+
+@keyframes dash {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 1;
   }
 }
