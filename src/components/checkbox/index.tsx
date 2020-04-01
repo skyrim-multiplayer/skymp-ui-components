@@ -17,11 +17,13 @@ export const Checkbox = React.forwardRef(
       style,
       children,
       onChange,
+      checked,
+      defaultChecked,
       ...props
     }: CheckboxProps,
     ref: React.Ref<HTMLInputElement>
   ) => {
-    const [isChecked, setIsChecked] = useState(props.checked);
+    const [isChecked, setIsChecked] = useState(defaultChecked || checked);
 
     const changeHandler = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -45,6 +47,7 @@ export const Checkbox = React.forwardRef(
         <input
           ref={ref}
           {...props}
+          defaultChecked={isChecked}
           type="checkbox"
           onChange={changeHandler}
           style={{ display: "none" }}

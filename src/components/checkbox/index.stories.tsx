@@ -40,6 +40,14 @@ export const Checked = () => {
   );
 };
 
+export const DefaultChecked = () => {
+  return (
+    <Wrapper>
+      <Checkbox defaultChecked={true}>Label</Checkbox>
+    </Wrapper>
+  );
+};
+
 export const DirectionRight = () => {
   return (
     <Wrapper>
