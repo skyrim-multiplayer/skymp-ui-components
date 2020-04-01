@@ -21,3 +21,42 @@
     }
   }
 }
+
+.skymp-button-group {
+  display: flex;
+  width: fit-content;
+
+  &__icon {
+    color: rgba(var(--skymp-second-color), 1);
+    transition-property: color;
+    transition-duration: var(--skymp-transition-duration);
+    transition-timing-function: var(--skymp-transition-timing-function);
+
+    &:last-of-type {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__item {
+    display: flex;
+    width: fit-content;
+
+    &:hover {
+      .skymp-button-group__icon {
+        color: rgba(var(--skymp-main-color), 1);
+      }
+    }
+
+    &:first-of-type {
+      & .skymp-button-group__icon:first-child {
+        display: none;
+      }
+    }
+
+    &:last-of-type {
+      & .skymp-button-group__icon:last-child {
+        display: none;
+      }
+    }
+  }
+}

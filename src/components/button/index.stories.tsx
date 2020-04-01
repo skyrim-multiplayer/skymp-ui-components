@@ -37,3 +37,13 @@ export const Disabled = () => {
     <Button disabled>Button</Button>
   </Wrapper>
 }
+
+export const GroupS = () => {
+  return <Wrapper>
+    <Button.Group>
+      <Button>Button 1</Button>
+      <Button>Button 2</Button>
+      <Button>Button 3</Button>
+    </Button.Group>
+  </Wrapper>
+}
