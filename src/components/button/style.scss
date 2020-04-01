@@ -1,0 +1,23 @@
+.skymp-button {
+  display: flex;
+  width: fit-content;
+  color: rgba(var(--skymp-second-color), 1);
+  background: transparent;
+  outline: none;
+  border: none;
+  transition-property: color;
+  transition-duration: var(--skymp-transition-duration);
+  transition-timing-function: var(--skymp-transition-timing-function);
+  cursor: pointer;
+
+  &:hover {
+    color: rgba(var(--skymp-main-color), 1);
+  }
+
+  &_disabled {
+    cursor: not-allowed;
+    &:hover {
+      color: rgba(var(--skymp-second-color), 1);
+    }
+  }
+}
