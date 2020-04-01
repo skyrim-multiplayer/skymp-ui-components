@@ -1,1 +1,1 @@
-export * from "./components/skymp-window";
+export * from "./components/window";
