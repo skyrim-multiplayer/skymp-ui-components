@@ -1,15 +1,15 @@
 import React from "react";
 
-import { SkympArrowButtonIcon } from "./index";
+import { ArrowButtonIcon } from "./index";
 
 export default {
   title: "Icons/arrow-button",
-  component: SkympArrowButtonIcon,
+  component: ArrowButtonIcon,
   parameters: {
     jest: ["arrow-button.test.tsx"]
   }
 };
 
 export const Default = () => {
-  return <SkympArrowButtonIcon />;
+  return <ArrowButtonIcon />;
 };

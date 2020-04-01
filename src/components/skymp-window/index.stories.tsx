@@ -29,7 +29,7 @@ export const Default = () => {
 
   const scale = number("scale", 1);
 
-  const isTrue = boolean("isTrue", false);
+  const isTrue = boolean("isTrue", true);
 
   const [isStyle, setIsStyle] = React.useState(false);
 

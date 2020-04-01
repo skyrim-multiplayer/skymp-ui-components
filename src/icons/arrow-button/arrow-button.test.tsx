@@ -1,10 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
 
-import { SkympArrowButtonIcon } from "./index";
+import { ArrowButtonIcon } from "./index";
 
 describe("SkympArrowButtonIcon", () => {
   it("renders without errors", () => {
-    shallow(<SkympArrowButtonIcon />);
+    shallow(<ArrowButtonIcon />);
   });
 });

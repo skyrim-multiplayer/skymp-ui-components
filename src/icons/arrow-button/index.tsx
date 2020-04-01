@@ -2,7 +2,7 @@ import React from "react";
 
 import { IconSVG } from "../shared";
 
-export const SkympArrowButtonIcon = (props: React.SVGProps<SVGSVGElement>) => {
+export const ArrowButtonIcon = (props: React.SVGProps<SVGSVGElement>) => {
   return (
     <IconSVG {...props} viewBox="0 0 0.72 0.88">
       <g stroke="none" fill="currentColor">

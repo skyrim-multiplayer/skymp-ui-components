@@ -64,7 +64,6 @@ export const Window = ({
   });
 
   useEffect(() => {
-    console.log("BIG EFF");
     if (isLayoutEffect) {
       if (type === WindowType.default) {
         if (props.width === undefined) {
@@ -84,9 +83,6 @@ export const Window = ({
       }
     }
   }, [isLayoutEffect, props.height, props.width, type, win, ref]);
-
-  console.log("win: ", win);
-  console.log("ref: ", ref);
 
   return (
     <div
