@@ -10,7 +10,11 @@ export default {
   }
 };
 
-const Wrapper = ({ children }: { children: React.ReactChild }) => {
+const Wrapper = ({
+  children
+}: {
+  children: React.ReactNode[] | React.ReactNode;
+}) => {
   return (
     <div
       style={{
@@ -33,17 +37,54 @@ export const Default = () => {
 };
 
 export const Disabled = () => {
-  return <Wrapper>
-    <Button disabled>Button</Button>
-  </Wrapper>
-}
+  return (
+    <Wrapper>
+      <Button disabled>Button</Button>
+    </Wrapper>
+  );
+};
 
-export const GroupS = () => {
-  return <Wrapper>
-    <Button.Group>
-      <Button>Button 1</Button>
-      <Button>Button 2</Button>
-      <Button>Button 3</Button>
-    </Button.Group>
-  </Wrapper>
-}
+export const Group = () => {
+  return (
+    <Wrapper>
+      <Button.Group>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </Button.Group>
+    </Wrapper>
+  );
+};
+
+export const ActiveButtonGroup = () => {
+  return (
+    <Wrapper>
+      <Button.Group>
+        <Button>Button 1</Button>
+        <Button active>Button 2</Button>
+        <Button>Button 3</Button>
+      </Button.Group>
+    </Wrapper>
+  );
+};
+
+export const ActiveButton = () => {
+  return (
+    <Wrapper>
+      <Button active>Active Button</Button>
+      <Button>Button</Button>
+    </Wrapper>
+  );
+};
+
+export const VisibleArrowGroup = () => {
+  return (
+    <Wrapper>
+      <Button.Group visibleIcons>
+        <Button>Button 1</Button>
+        <Button>Button 2</Button>
+        <Button>Button 3</Button>
+      </Button.Group>
+    </Wrapper>
+  );
+};

@@ -7,24 +7,28 @@ export interface ButtonProps
   extends React.DetailedHTMLProps<
     React.ButtonHTMLAttributes<HTMLButtonElement>,
     HTMLButtonElement
-  > {}
+  > {
+  active?: boolean;
+}
 
-export const Button = ({
-  children,
-  disabled,
-  className,
-  ...props
-}: ButtonProps) => {
-  return (
-    <button
-      {...props}
-      className={classNames("skymp-button", className, {
-        "skymp-button_disabled": disabled
-      })}
-    >
-      {children && <span className="skymp-button__children">{children}</span>}
-    </button>
-  );
-};
+export const Button = React.forwardRef(
+  (
+    { children, disabled, active, className, ...props }: ButtonProps,
+    ref: React.Ref<HTMLButtonElement>
+  ) => {
+    return (
+      <button
+        ref={ref}
+        {...props}
+        className={classNames("skymp-button", className, {
+          "skymp-button_disabled": disabled,
+          "skymp-button_active": active
+        })}
+      >
+        {children}
+      </button>
+    );
+  }
+);
 
 Button.displayName = "SkympButton";
