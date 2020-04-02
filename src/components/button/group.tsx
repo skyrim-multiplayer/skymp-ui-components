@@ -54,3 +54,5 @@ export const Group = ({
     </div>
   );
 };
+
+Group.displayName = "SkympButtonGroup";
