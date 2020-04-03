@@ -18,4 +18,9 @@
   // animation
   --skymp-transition-duration: 0.2s;
   --skymp-transition-timing-function: ease;
+
+  ::selection {
+    color: rgba(var(--skymp-main-color), 1);
+    background: rgba(var(--skymp-second-color), 1);
+  }
 }
