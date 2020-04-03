@@ -1,0 +1,50 @@
+.skymp-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: currentColor;
+  font: inherit;
+
+  &[type="password"] {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  &__wrapper {
+    font-family: var(--skymp-content-font);
+    color: rgba(var(--skymp-second-color), 1);
+    display: flex;
+    width: fit-content;
+    border-bottom: 1px solid currentColor;
+    padding: 0 0.5rem;
+    transition-property: color;
+    transition-duration: var(--skymp-transition-duration);
+    transition-timing-function: var(--skymp-transition-timing-function);
+  }
+
+  &__icon-wrapper {
+    margin-right: 0.5rem;
+  }
+
+  &_focus,
+  &_wrapper:hover {
+    color: rgba(var(--skymp-main-color), 1);
+  }
+}
+
+.skymp-input-password {
+  display: flex;
+  width: fit-content;
+  color: rgba(var(--skymp-second-color), 1);
+  border-bottom: 1px solid rgba(var(--skymp-second-color), 1);
+
+  &__icon-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+
+  &__input {
+    border-bottom: none;
+  }
+}
