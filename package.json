@@ -1,6 +1,6 @@
 {
   "name": "@skyrim-royale/skyrim-royale-ui-components",
-  "version": "0.2.2",
+  "version": "0.7.2",
   "description": "Library of UI components, styles and resources of Skyrim Royale",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
