@@ -1,0 +1,15 @@
+  <svg  viewBox="0 0 0.72 0.88" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd">
+  <defs>
+  <style type="text/css">
+   <![CDATA[
+    .fil0 {fill: #9d9e9e}
+   ]]>
+  </style>
+ </defs>
+ <g stroke="none" fill="currentColor">
+        <path  class="fil0"
+          d="M-0 0.88l0.08 -0 0.08 -0.08 0.13 0.08 0.43 -0.44 -0.42 -0.44 -0.08 0 -0.06 0.09 -0.11 -0.09 -0.04 0 0 0.64 0 0.24zm0.23 -0.12l-0.19 -0.18 -0.01 -0.26 0.21 -0.19 0.33 0.32 -0.35 0.32z"
+        />
+        <polygon  class="fil0" points="0.22,0.54 0.22,0.59 0.26,0.59 0.39,0.44 0.26,0.29 0.22,0.29 0.22,0.34 0.18,0.34 0.18,0.53 0.18,0.55" />
+      </g>
+  </svg>
