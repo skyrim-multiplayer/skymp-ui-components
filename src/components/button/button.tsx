@@ -20,6 +20,7 @@ export const Button = React.forwardRef(
       <button
         ref={ref}
         {...props}
+        data-active={active}
         className={classNames("skymp-button", className, {
           "skymp-button_disabled": disabled,
           "skymp-button_active": active
