@@ -1,0 +1,44 @@
+.skymp-checkbox {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  color: rgba(var(--skymp-second-color), 1);
+  font-family: var(--skymp-content-font);
+  padding: 1px 6px;
+
+  &__icon > *,
+  &__children {
+    transition-property: color, opacity;
+    transition-duration: var(--skymp-transition-duration);
+    transition-timing-function: var(--skymp-transition-timing-function);
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: rgba(var(--skymp-main-color), 1);
+  }
+
+  &_left {
+    & .skymp-checkbox__icon {
+      margin-right: 0.25rem;
+    }
+  }
+
+  &_right {
+    flex-direction: row-reverse;
+
+    & .skymp-checkbox__icon {
+      margin-left: 0.25rem;
+    }
+  }
+
+  &_disabled {
+    cursor: not-allowed;
+    &:hover {
+      color: rgba(var(--skymp-second-color), 1);
+    }
+  }
+
+  cursor: pointer;
+}

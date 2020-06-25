@@ -41,14 +41,12 @@ export default {
       tsconfig: "tsconfig.json",
       rollupCommonJSResolveHack: true,
       clean: true,
-      exclude: ["src/**/*.stories.tsx", "src/**/*.test.(tsx|ts)"]
+      exclude: ["src/**/*.stories.(tsx|ts)", "src/**/*.test.(tsx|ts)"]
     }),
     commonjs(),
     terser(),
     copy({
-      targets: [
-        { src: "src/fonts", dest: "dist" }
-      ]
+      targets: [{ src: "src/fonts", dest: "dist" }]
     })
   ]
 };

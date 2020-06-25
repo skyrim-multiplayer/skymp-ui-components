@@ -40,7 +40,7 @@ jobs:
       - run: npm run build
       - name: Build and deploy storybook
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
-        run: npm run build-storybook:docs
+        run: npm run storybook:build-docs
       - uses: JamesIves/github-pages-deploy-action@releases/v3
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         with:
