@@ -5,15 +5,15 @@ Library of UI components, styles and resources of SkyMP
 ### Install
 
 ```sh
-npm install @skymp/skymp-ui-components
+npm i @skyrim-royale/skyrim-royale-ui-components
 ```
 
 ### Development
 
 ```sh
-$ git clone https://github.com/svyatoslavratov/skymp-ui-components.git
-$ cd skymp-ui-components
-$ npm install
+$ git clone https://github.com/svyatoslavratov/skyrim-royale-ui-components
+$ cd skyrim-royale-ui-components
+$ npm i
 $ npm start
 ```
 
