@@ -1,0 +1,9 @@
+node_modules/*
+dist/*
+build/*
+
+# test artefact
+coverage/*
+
+.storybook-static/*
+.storybook-docs/*

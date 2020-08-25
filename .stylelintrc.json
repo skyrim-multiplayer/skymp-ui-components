@@ -4,7 +4,11 @@
     "stylelint-config-prettier",
     "stylelint-scss"
   ],
-  "ignoreFiles": ["**/*.(js|jsx|ts|tsx)"],
+  "ignoreFiles": [
+    "**/*.(js|jsx|ts|tsx)",
+    "node_modules/**",
+    ".storybook-docs/**"
+  ],
   "plugins": ["stylelint-scss"],
   "rules": {
     "at-rule-no-unknown": null,
