@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useState, useEffect } from "react";
 import classNames from "classnames";
 
 import { CheckboxIcon } from "../../icons/checkbox";
@@ -24,6 +24,10 @@ export const Checkbox = React.forwardRef(
     ref: React.Ref<HTMLInputElement>
   ) => {
     const [isChecked, setIsChecked] = useState(defaultChecked || checked);
+
+    useEffect(() => {
+      setIsChecked(checked);
+    }, [checked]);
 
     const changeHandler = useCallback(
       (e: React.ChangeEvent<HTMLInputElement>) => {
