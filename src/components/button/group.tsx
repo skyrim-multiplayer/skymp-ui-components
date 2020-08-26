@@ -28,7 +28,7 @@ export const Group = ({
           process.env.NODE_ENV === "development"
         ) {
           throw new Error(
-            "Button.Group should be have children type Skyrim Royale Button"
+            "Button.Group should be have children type SkympButton"
           );
         }
 

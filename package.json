@@ -1,35 +1,36 @@
 {
-  "name": "@skyrim-royale/skyrim-royale-ui-components",
+  "name": "@skymp/skymp-ui-components",
   "version": "0.7.2",
-  "description": "Library of UI components, styles and resources of Skyrim Royale",
+  "description": "Library of UI components, styles and resources of Skymp",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
-  "author": "Skyrim Royale",
+  "author": "Svyatoslav Ratov <svyatoslavratov@yandex.ru>",
   "license": "MIT",
   "keywords": [
-    "skyrim-royale",
-    "skyrim-royale-ui",
-    "skyrim-royale-react",
-    "skyrim-royale-ui-components",
-    "skyrim-royale-components",
-    "skyrim-royale-frontend",
-    "skyrim-royale-library",
-    "skyrim-royale-gamemode",
+    "skymp",
+    "skymp-ui",
+    "skymp-react",
+    "skymp-ui-components",
+    "skymp-components",
+    "skymp-frontend",
+    "skymp-library",
     "skyrim",
     "skyrim-react",
     "skyrim-ui-components",
     "skyrim-ui",
     "frontend",
-    "react-components"
+    "react-components",
+    "tes",
+    "the elder scrolls"
   ],
-  "homepage": "https://svyatoslavratov.github.io/skyrim-royale-ui-components",
+  "homepage": "https://svyatoslavratov.github.io/skymp-ui-components",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/svyatoslavratov/skyrim-royale-ui-components.git"
+    "url": "git+https://github.com/svyatoslavratov/skymp-ui-components.git"
   },
   "bugs": {
-    "url": "https://github.com/svyatoslavratov/skyrim-royale-ui-components/issues"
+    "url": "https://github.com/svyatoslavratov/skymp-ui-components/issues"
   },
   "scripts": {
     "start": "concurrently \"rollup -c -w\" \"npm run storybook\"",
