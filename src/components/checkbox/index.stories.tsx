@@ -16,7 +16,7 @@ const Wrapper = ({ children }: { children: React.ReactChild }) => {
       style={{
         padding: "1rem",
         background:
-          "rgba(var(--skymp-background-color), var(--skymp-background-opacity))"
+          "rgba(var(--sky-color-bg-rgb), 0.8)"
       }}
     >
       {children}

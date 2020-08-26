@@ -1,26 +1,32 @@
+@function hex-to-rgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
+@mixin set-colors(
+  $sky-color-primary: #ffffff,
+  $sky-color-bg: #000000,
+  $sky-color-fg: #9d9e9e
+) {
+  --sky-color-primary: #{$sky-color-primary};
+  --sky-color-primary-rgb: #{hex-to-rgb($sky-color-primary)};
+  --sky-color-bg: #{$sky-color-bg};
+  --sky-color-bg-rgb: #{hex-to-rgb($sky-color-bg)};
+  --sky-color-fg: #{$sky-color-fg};
+  --sky-color-fg-rgb: #{hex-to-rgb($sky-color-fg)};
+}
+
 :root {
-  /*
-    Colors
-    How to use?
-    color: rgba(var(--skymp-background-color), var(--skymp-background-opacity))
-  */
-  --skymp-main-color: 255, 255, 255;
-  --skymp-second-color: 157, 158, 158;
-  --skymp-background-color: 0, 0, 0;
+  @include set-colors();
 
   // fonts
-  --skymp-header-font: "BankirRetro";
-  --skymp-content-font: "FuturaCondencedNormal";
-
-  // other
-  --skymp-background-opacity: 0.8;
-
+  --sky-font-header: "BankirRetro";
+  --sky-font-content: "FuturaCondencedNormal";
   // animation
-  --skymp-transition-duration: 0.2s;
-  --skymp-transition-timing-function: ease;
+  --sky-transition-duration: 0.2s;
+  --sky-transition-timing-function: ease;
 
   ::selection {
-    color: rgba(var(--skymp-main-color), 1);
-    background: rgba(var(--skymp-second-color), 1);
+    color: var(--sky-color-primary);
+    background: var(--sky-color-fg);
   }
 }

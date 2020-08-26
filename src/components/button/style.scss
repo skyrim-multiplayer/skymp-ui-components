@@ -3,20 +3,20 @@
   width: fit-content;
   align-content: center;
   justify-content: center;
-  color: rgba(var(--skymp-second-color), 1);
+  color: var(--sky-color-fg);
   font-family: var(--skymp-content-font);
   background: transparent;
   outline: none;
   border: none;
   transition-property: color;
-  transition-duration: var(--skymp-transition-duration);
-  transition-timing-function: var(--skymp-transition-timing-function);
+  transition-duration: var(--sky-transition-duration);
+  transition-timing-function: var(--sky-transition-timing-function);
   cursor: pointer;
 
   &:hover,
   &:focus,
   &_active {
-    color: rgba(var(--skymp-main-color), 1);
+    color: var(--sky-color-primary);
   }
 
   &_disabled {
@@ -24,7 +24,7 @@
     &:hover,
     &:focus,
     &_active {
-      color: rgba(var(--skymp-second-color), 1);
+      color: var(--sky-color-fg);
     }
   }
 }

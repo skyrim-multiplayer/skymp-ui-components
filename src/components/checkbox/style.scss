@@ -2,21 +2,21 @@
   display: flex;
   align-items: center;
   width: fit-content;
-  color: rgba(var(--skymp-second-color), 1);
+  color: var(--sky-color-fg);
   font-family: var(--skymp-content-font);
   padding: 1px 6px;
 
   &__icon > *,
   &__children {
     transition-property: color, opacity;
-    transition-duration: var(--skymp-transition-duration);
-    transition-timing-function: var(--skymp-transition-timing-function);
+    transition-duration: var(--sky-transition-duration);
+    transition-timing-function: var(--sky-transition-timing-function);
   }
 
   &:hover,
   &:focus,
   &:active {
-    color: rgba(var(--skymp-main-color), 1);
+    color: var(--sky-color-primary);
   }
 
   &_left {
@@ -36,7 +36,7 @@
   &_disabled {
     cursor: not-allowed;
     &:hover {
-      color: rgba(var(--skymp-second-color), 1);
+      color: var(--sky-color-fg);
     }
   }
 
