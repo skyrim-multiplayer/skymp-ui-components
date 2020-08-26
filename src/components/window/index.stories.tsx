@@ -9,15 +9,6 @@ export default {
 };
 
 export const Default = () => {
-  // const width = number("width", 200);
-  // const height = number("width", 200);
-
-  // const maxWidth = number("maxWidth", 400);
-  // const maxHeight = number("maxHeight", 600);
-
-  // const minWidth = number("minWidth", 100);
-  // const minHeight = number("minHeight", 100);
-
   const top = number("top", 10);
   const left = number("left", 10);
 
@@ -37,14 +28,8 @@ export const Default = () => {
     <div>
       <Window
         type={type}
-        // width={width}
-        // height={height}
         top={top}
         left={left}
-        // maxWidth={maxWidth}
-        // maxHeight={maxHeight}
-        // minWidth={minWidth}
-        // minHeight={minHeight}
         scale={scale}
         content={
           <Child isTrue={isTrue} isStyle={isStyle} setIsStyle={setIsStyle} />

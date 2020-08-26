@@ -1,2 +1,2 @@
-import { Window, WindowProps, WindowType } from "./window";
-export { Window, WindowProps, WindowType };
+export { Window, WindowProps, WindowType } from "./window";
+export { LinearGradient } from "./linear-gradient";
