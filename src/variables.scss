@@ -3,30 +3,30 @@
 }
 
 @mixin set-colors(
-  $sky-color-primary: #ffffff,
-  $sky-color-bg: #000000,
-  $sky-color-fg: #9d9e9e
+  $skymp-color-primary: #ffffff,
+  $skymp-color-bg: #000000,
+  $skymp-color-fg: #9d9e9e
 ) {
-  --sky-color-primary: #{$sky-color-primary};
-  --sky-color-primary-rgb: #{hex-to-rgb($sky-color-primary)};
-  --sky-color-bg: #{$sky-color-bg};
-  --sky-color-bg-rgb: #{hex-to-rgb($sky-color-bg)};
-  --sky-color-fg: #{$sky-color-fg};
-  --sky-color-fg-rgb: #{hex-to-rgb($sky-color-fg)};
+  --skymp-color-primary: #{$skymp-color-primary};
+  --skymp-color-primary-rgb: #{hex-to-rgb($skymp-color-primary)};
+  --skymp-color-bg: #{$skymp-color-bg};
+  --skymp-color-bg-rgb: #{hex-to-rgb($skymp-color-bg)};
+  --skymp-color-fg: #{$skymp-color-fg};
+  --skymp-color-fg-rgb: #{hex-to-rgb($skymp-color-fg)};
 }
 
 :root {
   @include set-colors();
 
   // fonts
-  --sky-font-header: "BankirRetro";
-  --sky-font-content: "FuturaCondencedNormal";
+  --skymp-font-header: "BankirRetro";
+  --skymp-font-content: "FuturaCondencedNormal";
   // animation
-  --sky-transition-duration: 0.2s;
-  --sky-transition-timing-function: ease;
+  --skymp-transition-duration: 0.2s;
+  --skymp-transition-timing-function: ease;
 
   ::selection {
-    color: var(--sky-color-primary);
-    background: var(--sky-color-fg);
+    color: var(--skymp-color-primary);
+    background: var(--skymp-color-fg);
   }
 }

@@ -157,30 +157,30 @@ export const ContentSvg = (props: ContentSvgProps) => {
             <LinearGradient
               id="skymp-window__top-left-corner-gradient"
               gradientTransform={`translate(${props.x}, ${props.y})`}
-              firstColor="var(--sky-color-fg)"
-              secondColor="var(--sky-color-fg)"
+              firstColor="var(--skymp-color-fg)"
+              secondColor="var(--skymp-color-fg)"
             />
             <LinearGradient
               id="skymp-window__top-right-corner-gradient"
               gradientTransform={`translate(${props.y} -${props.width -
                 props.x}) scale(${props.scale}) rotate(90)`}
-              firstColor="var(--sky-color-fg)"
-              secondColor="var(--sky-color-fg)"
+              firstColor="var(--skymp-color-fg)"
+              secondColor="var(--skymp-color-fg)"
             />
             <LinearGradient
               id="skymp-window__bottom-left-corner-gradient"
               gradientTransform={`translate(-${props.height + props.y} ${
                 props.x
               }) scale(${props.scale}) rotate(-90)`}
-              firstColor="var(--sky-color-fg)"
-              secondColor="var(--sky-color-fg)"
+              firstColor="var(--skymp-color-fg)"
+              secondColor="var(--skymp-color-fg)"
             />
             <LinearGradient
               id="skymp-window__bottom-right-corner-gradient"
               gradientTransform={`translate(-${props.width -
                 props.x} -${props.height + props.y})`}
-              firstColor="var(--sky-color-fg)"
-              secondColor="var(--sky-color-fg)"
+              firstColor="var(--skymp-color-fg)"
+              secondColor="var(--skymp-color-fg)"
             />
           </>
         )}

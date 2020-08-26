@@ -19,8 +19,7 @@ const Wrapper = ({
     <div
       style={{
         padding: "1rem",
-        background:
-          "rgba(var(--sky-color-bg-rgb), 0.8)"
+        background: "rgba(var(--skymp-color-bg-rgb), 0.8)"
       }}
     >
       {children}

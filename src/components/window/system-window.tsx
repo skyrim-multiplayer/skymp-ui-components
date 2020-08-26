@@ -96,8 +96,8 @@ export const SystemWindow = (props: SystemWindowProps) => {
           ) : (
             <LinearGradient
               id="skymp-window__lines-gradient"
-              firstColor="var(--sky-color-fg)"
-              secondColor="var(--sky-color-fg)"
+              firstColor="var(--skymp-color-fg)"
+              secondColor="var(--skymp-color-fg)"
             />
           )}
           {props.backgroundGradientSvg ? (
@@ -108,9 +108,9 @@ export const SystemWindow = (props: SystemWindowProps) => {
           ) : (
             <LinearGradient
               id="skymp-window__background-gradient"
-              firstColor="var(--sky-color-bg-rgb)"
+              firstColor="var(--skymp-color-bg-rgb)"
               firstOpacity={0.8}
-              secondColor="var(--sky-color-bg-rgb)"
+              secondColor="var(--skymp-color-bg-rgb)"
               secondOpacity={0.8}
             />
           )}

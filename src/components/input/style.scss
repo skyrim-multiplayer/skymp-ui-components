@@ -11,14 +11,14 @@
 
   &__wrapper {
     font-family: var(--skymp-content-font);
-    color: var(--sky-color-fg);
+    color: var(--skymp-color-fg);
     display: flex;
     width: fit-content;
     border-bottom: 1px solid currentColor;
     padding: 0 0.5rem;
     transition-property: color;
-    transition-duration: var(--sky-transition-duration);
-    transition-timing-function: var(--sky-transition-timing-function);
+    transition-duration: var(--skymp-transition-duration);
+    transition-timing-function: var(--skymp-transition-timing-function);
   }
 
   &__icon-wrapper {
@@ -27,15 +27,15 @@
 
   &_focus,
   &_wrapper:hover {
-    color: var(--sky-color-primary);
+    color: var(--skymp-color-primary);
   }
 }
 
 .skymp-input-password {
   display: flex;
   width: fit-content;
-  color: var(--sky-color-fg);
-  border-bottom: 1px solid var(--sky-color-fg);
+  color: var(--skymp-color-fg);
+  border-bottom: 1px solid var(--skymp-color-fg);
 
   &__icon-wrapper {
     display: flex;

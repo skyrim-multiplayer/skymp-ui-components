@@ -18,8 +18,7 @@ const Wrapper = ({
     <div
       style={{
         padding: "1rem",
-        background:
-          "rgba(var(--sky-color-bg-rgb), 0.8)"
+        background: "rgba(var(--skymp-color-bg-rgb), 0.8)"
       }}
     >
       {children}
@@ -62,11 +61,10 @@ export const PasswordIcon = () => {
   );
 };
 
-
 export const PasswordIconWithCustomIcon = () => {
   return (
     <Wrapper>
-      <Input.Password  eyeIcon={<InviteCodeIcon />} />
-      </Wrapper>
-  )
-}
+      <Input.Password eyeIcon={<InviteCodeIcon />} />
+    </Wrapper>
+  );
+};
